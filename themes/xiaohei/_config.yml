@@ -1,0 +1,67 @@
+# 主题 xiaohei · 文档站布局
+english_name: Eason
+slogan: Split the model. Ship the system.
+slogan_zh: 拆开模型，接进业务。
+
+avatar: /img/avatar.jpg
+favicon: /img/favicon.png
+cover: /img/cover.jpg
+wechat_qr: /img/wechat-qr.jpg
+
+tabs:
+  笔记: /categories/Python/
+  思考: /categories/Dynamics/
+  归档: /archives/
+
+sidebar:
+  - id: notes
+    label: 学习笔记
+    children:
+      - { name: Python, path: /categories/Python/, icon: code }
+      - { name: MySQL, path: /categories/MySQL/, icon: db }
+      - { name: Redis, path: /categories/Redis/, icon: cache }
+      - { name: Machine Learning, path: /categories/Machine-Learning/, icon: chart }
+      - { name: Deep Learning, path: /categories/Deep-Learning/, icon: net }
+      - { name: NLP, path: /categories/NLP/, icon: text }
+      - { name: RAG, path: /categories/RAG/, icon: search }
+      - { name: Milvus, path: /categories/Milvus/, icon: hex }
+      - { name: Agent, path: /categories/Agent/, icon: bot }
+  - id: thoughts
+    label: 行业思考
+    children:
+      - { name: Dynamics, path: /categories/Dynamics/, icon: news }
+      - { name: Job Trends, path: /categories/Job-Trends/, icon: job }
+      - { name: How to Learn, path: /categories/How-to-Learn/, icon: book }
+  - id: library
+    label: 站点
+    children:
+      - { name: Archives, path: /archives/, icon: archive }
+      - { name: About, path: /about/, icon: user }
+      - { name: Friends, path: /links/, icon: link }
+
+social:
+  github: https://github.com/zhanglichen0711
+  rss: /atom.xml
+
+giscus:
+  enable: true
+  repo: zhanglichen0711/zhanglichen0711.github.io
+  repo_id: ""
+  category: Announcements
+  category_id: ""
+  mapping: pathname
+  strict: "0"
+  reactions: "1"
+  emit_metadata: "0"
+  input_position: bottom
+  theme_light: light
+  theme_dark: transparent_dark
+  lang: zh-CN
+  loading: lazy
+
+search: true
+reading_progress: true
+toc: true
+related_posts: true
+related_count: 3
+footer: © 2026 Eason · 小黑程序员

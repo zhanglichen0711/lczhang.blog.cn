@@ -1,0 +1,89 @@
+<%
+  const cats = page.categories ? page.categories.toArray() : [];
+  const tags = page.tags ? page.tags.toArray() : [];
+  let related = [];
+  if (theme.related_posts && tags.length) {
+    const tagNames = tags.map(t => t.name);
+    related = site.posts
+      .filter(p => p._id !== page._id && p.tags && p.tags.some(t => tagNames.indexOf(t.name) !== -1))
+      .sort('-date')
+      .limit(theme.related_count || 3)
+      .toArray();
+  }
+%>
+<article class="article">
+  <header class="article-head">
+    <div class="post-card-meta">
+      <% cats.forEach(function (c) { %>
+        <a class="chip" href="<%= url_for(c.path) %>"><%= c.name %></a>
+      <% }) %>
+      <time datetime="<%= date_xml(page.date) %>"><%= date(page.date, 'YYYY-MM-DD') %></time>
+    </div>
+    <h1><%= page.title %></h1>
+    <% if (page.description) { %><p class="lede"><%= page.description %></p><% } %>
+    <% if (tags.length) { %>
+      <div class="tag-row">
+        <% tags.forEach(function (tag) { %>
+          <a href="<%= url_for(tag.path) %>">#<%= tag.name %></a>
+        <% }) %>
+      </div>
+    <% } %>
+  </header>
+
+  <div class="article-layout">
+    <div class="article-body" id="articleBody">
+      <%- page.content %>
+    </div>
+    <% if (theme.toc !== false) { %>
+      <aside class="toc" id="tocBox">
+        <p class="toc-title">On this page</p>
+        <nav id="tocNav"></nav>
+      </aside>
+    <% } %>
+  </div>
+
+  <nav class="post-nav">
+    <% if (page.prev) { %>
+      <a href="<%= url_for(page.prev.path) %>"><span>Previous</span><strong><%= page.prev.title %></strong></a>
+    <% } else { %><span></span><% } %>
+    <% if (page.next) { %>
+      <a href="<%= url_for(page.next.path) %>"><span>Next</span><strong><%= page.next.title %></strong></a>
+    <% } %>
+  </nav>
+</article>
+
+<% if (related.length) { %>
+  <section class="related">
+    <h2>Related notes</h2>
+    <div class="related-grid">
+      <% related.forEach(function (p) { %>
+        <a href="<%= url_for(p.path) %>">
+          <small><%= date(p.date, 'YYYY-MM-DD') %></small>
+          <strong><%= p.title %></strong>
+        </a>
+      <% }) %>
+    </div>
+  </section>
+<% } %>
+
+<% if (theme.giscus && theme.giscus.enable) { %>
+  <section class="comments" id="comments">
+    <h2>Comments</h2>
+    <script src="https://giscus.app/client.js"
+      data-repo="<%= theme.giscus.repo %>"
+      data-repo-id="<%= theme.giscus.repo_id %>"
+      data-category="<%= theme.giscus.category %>"
+      data-category-id="<%= theme.giscus.category_id %>"
+      data-mapping="<%= theme.giscus.mapping %>"
+      data-strict="<%= theme.giscus.strict %>"
+      data-reactions-enabled="<%= theme.giscus.reactions %>"
+      data-emit-metadata="<%= theme.giscus.emit_metadata %>"
+      data-input-position="<%= theme.giscus.input_position %>"
+      data-theme="<%= theme.giscus.theme_light %>"
+      data-lang="<%= theme.giscus.lang %>"
+      data-loading="<%= theme.giscus.loading %>"
+      crossorigin="anonymous"
+      async>
+    </script>
+  </section>
+<% } %>

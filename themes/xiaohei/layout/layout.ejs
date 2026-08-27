@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%
+    const pageTitle = page.title
+      ? page.title + ' · ' + config.title
+      : (config.subtitle ? config.title + ' · ' + config.subtitle : config.title);
+    const desc = page.description || page.excerpt || config.description || '';
+    const plainDesc = String(desc).replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim().slice(0, 160);
+    const cover = page.cover || theme.cover || '/img/cover.jpg';
+  %>
+  <title><%= pageTitle %></title>
+  <meta name="description" content="<%= plainDesc %>">
+  <meta name="author" content="<%= config.author %>">
+  <meta property="og:title" content="<%= page.title || config.title %>">
+  <meta property="og:description" content="<%= plainDesc %>">
+  <meta property="og:image" content="<%= url_for(cover) %>">
+  <link rel="icon" href="<%= url_for(theme.favicon) %>">
+  <link rel="alternate" type="application/atom+xml" title="<%= config.title %>" href="<%= url_for('/atom.xml') %>">
+  <link rel="stylesheet" href="<%= url_for('/css/style.css') %>">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('xiaohei-theme');
+        if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body class="docs">
+  <div class="progress" id="readProgress" hidden></div>
+  <%- partial('_partial/header') %>
+  <div class="docs-shell">
+    <%- partial('_partial/sidebar') %>
+    <div class="docs-main">
+      <main class="main <%= is_post() ? 'main-post' : '' %>">
+        <%- body %>
+      </main>
+      <%- partial('_partial/footer') %>
+    </div>
+  </div>
+  <%- partial('_partial/search') %>
+  <%- partial('_partial/wechat') %>
+  <script src="<%= url_for('/js/main.js') %>"></script>
+</body>
+</html>

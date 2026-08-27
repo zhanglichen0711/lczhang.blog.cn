@@ -1,0 +1,105 @@
+# 小黑程序员 · Hexo 站点配置
+# 改完后执行: npm run dev
+
+title: 小黑程序员
+subtitle: AI大模型应用开发
+description: 记录大模型学习与行业热点思考。拆开模型，接进业务。
+keywords: LLM,RAG,Agent,NLP,深度学习,Python,AI应用开发
+author: Eason
+language: zh-CN
+timezone: Asia/Shanghai
+
+# 若使用项目仓库 pages，把 url 改成 https://zhanglichen0711.github.io/仓库名/
+url: https://zhanglichen0711.github.io
+root: /
+permalink: posts/:year/:month/:day/:title/
+permalink_defaults:
+pretty_urls:
+  trailing_index: false
+  trailing_html: false
+
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+new_post_name: :year-:month-:day-:title.md
+default_layout: post
+titlecase: false
+external_link:
+  enable: true
+  field: site
+  exclude: ''
+filename_case: 0
+render_drafts: false
+post_asset_folder: true
+relative_link: false
+future: true
+syntax_highlighter: highlight.js
+highlight:
+  auto_detect: true
+  line_number: true
+  line_threshold: 0
+  wrap: true
+  hljs: false
+  exclude_languages:
+    - mermaid
+prismjs:
+  preprocess: true
+  line_number: true
+  line_threshold: 0
+  tab_replace: ''
+
+index_generator:
+  path: ''
+  per_page: 8
+  order_by: -date
+
+default_category: Python
+category_map:
+tag_map:
+
+markdown:
+  preset: default
+  render:
+    html: true
+    xhtmlOut: false
+    breaks: true
+    linkify: true
+    typographer: true
+  anchors:
+    level: 2
+    collisionSuffix: ''
+    permalink: false
+
+# 分页
+per_page: 8
+pagination_dir: page
+
+theme: xiaohei
+
+# 部署到 GitHub Pages
+# 推荐仓库名: zhanglichen0711.github.io （用户站，url 保持上面即可）
+# 若用普通仓库，把 repo 改成 git@github.com:zhanglichen0711/仓库名.git
+# 并把 url/root 同步修改
+deploy:
+  type: git
+  repo: git@github.com:zhanglichen0711/zhanglichen0711.github.io.git
+  branch: main
+
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content: false
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+
+sitemap:
+  path: sitemap.xml
