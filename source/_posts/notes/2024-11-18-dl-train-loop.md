@@ -5,6 +5,7 @@ categories:
   - Deep-Learning
 tags: [深度学习]
 description: "先算清 iteration，再谈训练多久。"
+abbrlink: 2350999740
 ---
 
 Epoch 是整套训练数据过一遍。batch 是一次更新用的样本数。iteration 约等于 `(N + B - 1) // B`。

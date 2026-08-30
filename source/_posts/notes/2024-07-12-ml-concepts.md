@@ -5,6 +5,7 @@ categories:
   - Machine-Learning
 tags: [机器学习]
 description: "三个词不是同义词。准确率必须交代划分方式。"
+abbrlink: 920923342
 ---
 
 人工智能是目标，机器学习用数据拟合可泛化规则，深度学习用多层可微模块学表示。

@@ -5,6 +5,7 @@ categories:
   - MySQL
 tags: [MySQL, RAG]
 description: DDL / DML / DQL 背再多也不如先想清楚：文档、切片、权限和引用主键分别放哪。
+abbrlink: 3390242430
 ---
 
 数据库课会把 SQL 分成 DDL、DML、DQL，再补约束、多表和函数。知识库项目里，MySQL 很少用来存向量，但几乎一定用来存「事实和权限」。

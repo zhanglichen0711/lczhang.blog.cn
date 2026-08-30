@@ -5,6 +5,7 @@ categories:
   - Deep-Learning
 tags: [深度学习]
 description: "Clear grads every step. Learning rate beats a fancier block more often than expected."
+abbrlink: 4243979036
 ---
 
 前向算损失，反向传梯度，更新后清零。不清零会把上一步梯度累加上去。

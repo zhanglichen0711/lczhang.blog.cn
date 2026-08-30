@@ -6,7 +6,10 @@ hexo.extend.generator.register('xiaohei-search', function (locals) {
     return {
       title: p.title,
       url: root + p.path,
-      content: raw.slice(0, 6000),
+      date: p.date,
+      // 只留前 1500 字：够做上下文高亮，又能把索引体积压下来
+      // （原来 6000 字/篇，78 篇约 180KB；这里约 55KB）
+      content: raw.slice(0, 1500),
       tags: p.tags ? p.tags.map(function (t) { return t.name; }) : [],
       categories: p.categories ? p.categories.map(function (c) { return c.name; }) : []
     };

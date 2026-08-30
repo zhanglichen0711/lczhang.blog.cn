@@ -31,3 +31,24 @@ hexo.extend.generator.register('xiaohei-sections', function (locals) {
     };
   });
 });
+
+// robots.txt：静态文件里拿不到 config.url，所以用 generator 生成
+hexo.extend.generator.register('xiaohei-robots', function () {
+  const root = String(hexo.config.url || '').replace(/\/+$/, '');
+  return {
+    path: 'robots.txt',
+    data: 'User-agent: *\nAllow: /\n\nSitemap: ' + root + '/sitemap.xml\n'
+  };
+});
+
+// 404：GitHub Pages 只认站点根目录的 404.html，不能是 /404/index.html
+hexo.extend.generator.register('xiaohei-404', function () {
+  return {
+    path: '404.html',
+    layout: ['404', 'page', 'index'],
+    data: {
+      title: '页面不存在',
+      description: '这个地址没有对应的内容'
+    }
+  };
+});

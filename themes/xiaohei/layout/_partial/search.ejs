@@ -1,9 +1,12 @@
-<div class="overlay" id="searchModal" hidden>
+<div class="overlay" id="searchModal" role="dialog" aria-modal="true" aria-label="搜索"
+     data-search-url="<%= url_for('/search.json') %>" hidden>
   <div class="overlay-card search-card">
     <div class="search-bar">
-      <input id="searchInput" type="search" placeholder="搜索笔记、模型、方法…" autocomplete="off">
+      <input id="searchInput" type="search" placeholder="搜索笔记、模型、方法…"
+             autocomplete="off" aria-label="搜索关键词">
       <button class="icon-btn" id="searchClose" type="button" aria-label="关闭">×</button>
     </div>
-    <div id="searchResults" class="search-results"></div>
+    <div id="searchResults" class="search-results" role="listbox" aria-label="搜索结果"></div>
+    <p class="search-tip"><kbd>↑</kbd> <kbd>↓</kbd> 选择 · <kbd>Enter</kbd> 打开 · <kbd>Esc</kbd> 关闭</p>
   </div>
 </div>

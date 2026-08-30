@@ -5,6 +5,7 @@ categories:
   - RAG
 tags: [RAG]
 description: "不是所有问题都该检索。改写是为了对齐条文口吻。"
+abbrlink: 2742877793
 ---
 
 闲聊、查规范、对比条款、要整改建议，应走不同 Prompt 和过滤条件。

@@ -7,11 +7,14 @@
   --border: #e5e7eb;
   --accent: #16a34a;
   --accent-soft: #dcfce7;
+  --link: #16a34a;
   --code-bg: #111111;
   --code-text: #e7e7e7;
   --shadow: none;
   --mono: "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
+  /* 顶栏实测高度，由 main.js 写入，避免硬编码 96px 错位 */
+  --header-h: 96px;
 }
 
 [data-theme="dark"] {
@@ -23,6 +26,7 @@
   --border: #2a2a2a;
   --accent: #4ade80;
   --accent-soft: #052e16;
+  --link: #4ade80;
   --code-bg: #050505;
   --code-text: #e7e7e7;
 }
@@ -49,6 +53,8 @@ code, pre { font-family: var(--mono); }
 
 .site-header {
   position: sticky; top: 0; z-index: 40;
+  /* 前一条是回退：不支持 color-mix 的浏览器若整条声明失效，顶栏会变透明 */
+  background: var(--bg);
   background: color-mix(in srgb, var(--bg) 92%, transparent);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
@@ -78,7 +84,11 @@ code, pre { font-family: var(--mono); }
   padding: 8px 14px;
   cursor: pointer;
   font-size: 13px;
+  /* 它是 <button>，需要重置默认字体与对齐 */
+  font-family: var(--sans);
+  text-align: left;
 }
+.header-search:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .header-search .search-ph { flex: 1; }
 .header-search kbd {
   font-family: var(--mono); font-size: 11px;
@@ -108,12 +118,12 @@ code, pre { font-family: var(--mono); }
 /* 高亮由 header.ejs 按当前路径计算，不再硬编码 :first-child */
 .top-tabs a.active { color: var(--accent); border-bottom-color: var(--accent); }
 
-.docs-shell { display: grid; grid-template-columns: 268px minmax(0, 1fr); min-height: calc(100vh - 96px); }
+.docs-shell { display: grid; grid-template-columns: 268px minmax(0, 1fr); min-height: calc(100vh - var(--header-h)); }
 .sidebar {
   background: var(--bg-side);
   border-right: 1px solid var(--border);
   padding: 12px 10px 48px;
-  position: sticky; top: 96px; height: calc(100vh - 96px); overflow: auto;
+  position: sticky; top: var(--header-h); height: calc(100vh - var(--header-h)); overflow: auto;
 }
 .side-group {
   width: 100%; display: flex; align-items: center; justify-content: space-between;
@@ -121,7 +131,10 @@ code, pre { font-family: var(--mono); }
   padding: 10px 10px; border-radius: 10px; cursor: pointer;
   font: 600 15px var(--sans);
 }
-.side-group:hover { background: color-mix(in srgb, var(--accent-soft) 55%, transparent); }
+.side-group:hover {
+  background: var(--accent-soft);
+  background: color-mix(in srgb, var(--accent-soft) 55%, transparent);
+}
 .side-group .chev { color: var(--muted); transition: transform .15s ease; }
 .side-group[aria-expanded="true"] .chev { transform: rotate(0deg); }
 .side-group[aria-expanded="false"] .chev { transform: rotate(-90deg); }
@@ -132,7 +145,11 @@ code, pre { font-family: var(--mono); }
   color: var(--text); text-decoration: none;
   padding: 8px 10px 8px 12px; border-radius: 10px; font-size: 14.5px;
 }
-.side-item:hover { background: color-mix(in srgb, var(--accent-soft) 70%, transparent); text-decoration: none; }
+.side-item:hover {
+  background: var(--accent-soft);
+  background: color-mix(in srgb, var(--accent-soft) 70%, transparent);
+  text-decoration: none;
+}
 .side-item.active { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
 .side-ico { display: grid; place-items: center; width: 20px; height: 20px; color: inherit; flex: 0 0 20px; }
 .side-ico svg { display: block; }
@@ -178,7 +195,7 @@ code, pre { font-family: var(--mono); }
 .lede { color: var(--muted); font-size: 17px; }
 .article-layout { display: grid; grid-template-columns: minmax(0, 1fr) 200px; gap: 28px; align-items: start; }
 .article-body { max-width: 760px; }
-.article-body h2, .article-body h3 { scroll-margin-top: 110px; }
+.article-body h2, .article-body h3, .article-body h4 { scroll-margin-top: calc(var(--header-h) + 16px); }
 .article-body h2 { margin-top: 1.7em; font-size: 22px; }
 .article-body h3 { margin-top: 1.3em; font-size: 17px; }
 .article-body blockquote {
@@ -188,6 +205,14 @@ code, pre { font-family: var(--mono); }
 .article-body table { width: 100%; border-collapse: collapse; font-size: 14px; }
 .article-body th, .article-body td { border: 1px solid var(--border); padding: 8px 10px; }
 .article-body th { background: var(--bg-side); text-align: left; font-weight: 600; }
+
+/* 宽表格横向滚动容器（由 scripts/table-wrap.js 在构建期自动包裹，代码块内的表格会跳过） */
+.table-wrap { overflow-x: auto; margin: 1.2em 0; -webkit-overflow-scrolling: touch; }
+.table-wrap table { margin: 0; min-width: 100%; }
+
+/* 图片 */
+.article-body img { border-radius: 8px; height: auto; }
+.article-body figcaption { text-align: center; color: var(--muted); font-size: 13px; margin-top: 8px; }
 
 /* 排除：Hexo 开启 line_number 后，代码块内部是 <table> 布局（gutter 行号 + code 内容）。
    上面的文章表格规则会命中它，导致代码块外多一圈边框、行号与代码间多一条竖线。 */
@@ -290,10 +315,27 @@ code, pre { font-family: var(--mono); }
 .highlight .emphasis, .highlight .hljs-emphasis { font-style: italic; }
 .highlight .strong, .highlight .hljs-strong { font-weight: 700; }
 
-.toc { position: sticky; top: 112px; font-size: 13px; }
+.toc { position: sticky; top: calc(var(--header-h) + 16px); font-size: 13px; }
 .toc a { display: block; color: var(--muted); text-decoration: none; padding: 3px 0; }
 .toc a:hover, .toc a.active { color: var(--accent); }
 .toc .toc-h3 { padding-left: 12px; }
+
+/* 404 页 */
+.notfound { max-width: 640px; padding: 24px 0; }
+.notfound h1 { margin: 8px 0 10px; font-size: 30px; letter-spacing: -0.02em; }
+.notfound .lede { color: var(--muted); margin: 0 0 22px; }
+.notfound-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.nf-btn {
+  display: inline-block; font: inherit; font-size: 14px;
+  border: 1px solid var(--border); background: var(--bg-elev); color: var(--text);
+  padding: 8px 16px; border-radius: 8px; cursor: pointer; text-decoration: none;
+}
+.nf-btn:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+.notfound-hint { margin-top: 18px; color: var(--muted); font-size: 13px; }
+.notfound-hint kbd {
+  font-family: var(--mono); font-size: 12px;
+  border: 1px solid var(--border); border-radius: 6px; padding: 1px 6px;
+}
 
 /* 移动端折叠目录：桌面端隐藏，≤960px 时替代被隐藏的右侧 .toc */
 .toc-mobile { display: none; }
@@ -352,15 +394,20 @@ code, pre { font-family: var(--mono); }
   padding: 10px 12px; font: 15px var(--sans);
 }
 .search-results { max-height: 50vh; overflow: auto; margin-top: 12px; }
-.search-item { display: block; padding: 10px 4px; border-bottom: 1px solid var(--border); color: inherit; text-decoration: none; }
+.search-item { display: block; padding: 10px 6px; border-bottom: 1px solid var(--border); color: inherit; text-decoration: none; border-radius: 6px; }
 .search-item small { color: var(--muted); }
+.search-item .search-snippet { display: block; color: var(--muted); font-size: 13px; margin-top: 3px; line-height: 1.6; }
+.search-item:hover, .search-item.active { background: var(--accent-soft); text-decoration: none; }
+.search-results mark { background: color-mix(in srgb, var(--accent) 22%, transparent); color: var(--accent); padding: 0 2px; border-radius: 2px; }
+.search-tip { margin: 10px 2px 0; color: var(--muted); font-size: 12px; font-family: var(--mono); }
+.search-tip kbd { font-family: var(--mono); border: 1px solid var(--border); border-radius: 4px; padding: 0 4px; }
 .wechat-card { width: min(320px, 100%); text-align: center; position: relative; }
 .overlay-close { position: absolute; right: 8px; top: 8px; }
 
 @media (max-width: 960px) {
   .docs-shell { grid-template-columns: 1fr; }
   .sidebar {
-    display: none; position: fixed; top: 96px; left: 0; bottom: 0; width: min(280px, 86vw);
+    display: none; position: fixed; top: var(--header-h); left: 0; bottom: 0; width: min(280px, 86vw);
     z-index: 35; height: auto;
   }
   .sidebar.open { display: block; }
@@ -399,8 +446,18 @@ code, pre { font-family: var(--mono); }
 
   /* 抽屉遮罩：z-index 34，侧栏是 35，保证侧栏压在遮罩之上 */
   .nav-backdrop {
-    display: block; position: fixed; top: 96px; left: 0; right: 0; bottom: 0;
+    display: block; position: fixed; top: var(--header-h); left: 0; right: 0; bottom: 0;
     background: rgba(10, 12, 10, .45); z-index: 34;
   }
   .nav-backdrop[hidden] { display: none; }
+}
+
+/* 尊重系统的「减少动态效果」设置 */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
 }

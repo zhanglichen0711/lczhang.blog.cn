@@ -12,7 +12,13 @@ timezone: Asia/Shanghai
 # 若使用项目仓库 pages，把 url 改成 https://zhanglichen0711.github.io/仓库名/
 url: https://zhanglichen0711.github.io
 root: /
-permalink: posts/:year/:month/:day/:title/
+# 用 abbrlink 生成短且稳定的链接：以后改文件名或在 notes/thoughts 之间移动文章，URL 都不会变。
+# 原来的 posts/:year/:month/:day/:title/ 会把目录名拼进标题，得到
+# /posts/2025/09/12/notes-2025-09-12-rag-minimal/ 这种又长又冗余的地址。
+permalink: posts/:abbrlink/
+abbrlink:
+  alg: crc32
+  rep: dec
 permalink_defaults:
 pretty_urls:
   trailing_index: false

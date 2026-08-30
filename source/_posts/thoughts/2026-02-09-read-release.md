@@ -5,6 +5,7 @@ categories:
   - Dynamics
 tags: [行业动态]
 description: "上下文、工具调用、价格、开放程度、自己的题目。"
+abbrlink: 961436461
 ---
 
 1. 标称的超长上下文在业务长度下是否仍稳。

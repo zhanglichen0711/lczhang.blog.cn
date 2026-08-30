@@ -5,6 +5,7 @@ categories:
   - Agent
 tags: [Agent, MCP, 工具调用]
 description: Function Call 解决「模型如何提出一次调用」；MCP 解决「工具如何描述自己」；Agent 模式决定要不要规划、反思和协作。
+abbrlink: 3379738813
 ---
 
 把能调工具的对话系统直接叫 Agent，会把三件不同的事混在一起。课堂里的 SmartVoyage 旅行助手把它们拆开了：先有函数调用，再有 MCP 描述工具，再用不同 Agent 模式决定怎么用这些工具，A2A 则是多个智能体之间怎么说话。

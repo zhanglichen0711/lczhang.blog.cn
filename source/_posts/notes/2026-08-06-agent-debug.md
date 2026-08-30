@@ -5,6 +5,7 @@ categories:
   - Agent
 tags: [Agent]
 description: "落盘 thought、tool、observation，问题会从「模型不行」变成可修的步骤。"
+abbrlink: 4201707697
 ---
 
 每一轮留下：选了哪个工具、参数过没过 schema、返回是否被截断、是否在同一工具上打转。

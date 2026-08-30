@@ -5,6 +5,7 @@ categories:
   - Redis
 tags: [Redis]
 description: "String、Hash、List 加 TTL 就覆盖大部分场景。"
+abbrlink: 80912641
 ---
 
 结构课会介绍很多类型。接到大模型应用，高频只用几种：

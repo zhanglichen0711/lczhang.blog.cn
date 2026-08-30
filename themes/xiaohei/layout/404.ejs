@@ -1,0 +1,14 @@
+<section class="notfound">
+  <p class="eyebrow">404</p>
+  <h1>这个地址不存在</h1>
+  <p class="lede">文章可能改过链接，或者地址输错了。</p>
+
+  <div class="notfound-actions">
+    <button class="nf-btn" id="searchOpen" type="button">搜索文章</button>
+    <a class="nf-btn" href="<%= url_for('/notes/') %>">全部笔记</a>
+    <a class="nf-btn" href="<%= url_for('/archives/') %>">归档</a>
+    <a class="nf-btn" href="<%= url_for('/') %>">返回首页</a>
+  </div>
+
+  <p class="notfound-hint">或者直接按 <kbd>Ctrl</kbd> + <kbd>K</kbd> 搜索。</p>
+</section>

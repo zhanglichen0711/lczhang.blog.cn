@@ -5,6 +5,7 @@ categories:
   - Agent
 tags: [Agent]
 description: "自主程度不是职称。能写死的顺序就不要自由规划。"
+abbrlink: 263983963
 ---
 
 五种常见模式：Tool use、ReAct、Reflection、Planning、Multi-agent。Agent 是实体，Agentic 描述自主程度。

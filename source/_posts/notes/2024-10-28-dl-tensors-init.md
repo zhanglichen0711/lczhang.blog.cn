@@ -5,6 +5,7 @@ categories:
   - Deep-Learning
 tags: [深度学习]
 description: "Zero init makes neurons symmetric. Kaiming / Xavier keep signals usable."
+abbrlink: 852511471
 ---
 
 文本和图像最后都变成张量。`nn.Linear` 是一层仿射变换。

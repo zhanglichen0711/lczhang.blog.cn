@@ -5,6 +5,7 @@ categories:
   - RAG
 tags: [RAG]
 description: "切得可引用，找得回来，必须带出处。"
+abbrlink: 2139012861
 ---
 
 1. 按标题和语义块切，避开把表格从中间切断。每个 chunk 带 `doc_id`、`section`、`hash`、版本。

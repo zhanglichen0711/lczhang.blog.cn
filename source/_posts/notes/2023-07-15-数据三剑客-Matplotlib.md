@@ -5,6 +5,7 @@ categories:
   - Python
 tags: [Python, Matplotlib]
 description: "Matplotlib的基本使用"
+abbrlink: 1122372252
 ---
 
 ## Matplotlib的使用

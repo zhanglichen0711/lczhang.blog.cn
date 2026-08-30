@@ -5,6 +5,7 @@ categories:
   - NLP
 tags: [NLP, Transformer]
 description: "BERT 双向理解，GPT 自回归生成。"
+abbrlink: 2884929297
 ---
 
 编码器、解码器、多头注意力、前馈层、残差和 LayerNorm 组成可堆叠模块。优势是并行和长程依赖，位置信息要额外编码。

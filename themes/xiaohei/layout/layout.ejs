@@ -10,19 +10,89 @@
     const desc = page.description || page.excerpt || config.description || '';
     const plainDesc = String(desc).replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim().slice(0, 160);
     const cover = page.cover || theme.cover || '/img/cover.jpg';
+
+    // OG / canonical / JSON-LD 都要求绝对 URL，url_for 只给相对路径
+    const siteRoot = String(config.url || '').replace(/\/+$/, '');
+    const absUrl = function (p) {
+      const u = url_for(p);
+      return /^https?:\/\//.test(u) ? u : siteRoot + (u.charAt(0) === '/' ? u : '/' + u);
+    };
+    const pageUrl = function (p) {
+      let u = String(p == null ? '' : p).replace(/index\.html$/, '');
+      if (!u) u = '/';
+      return absUrl(u);
+    };
+    const canonicalUrl = pageUrl(page.path);
+    const imageUrl = absUrl(cover);
+    const ogType = is_post() ? 'article' : 'website';
+
+    // 结构化数据
+    let schema;
+    if (is_post()) {
+      schema = {
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        headline: page.title,
+        description: plainDesc,
+        image: imageUrl,
+        url: canonicalUrl,
+        datePublished: date_xml(page.date),
+        dateModified: date_xml(page.updated || page.date),
+        author: { '@type': 'Person', name: config.author },
+        publisher: { '@type': 'Organization', name: config.title },
+        mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+        keywords: (page.tags && page.tags.length)
+          ? page.tags.map(function (t) { return t.name; }).join(', ')
+          : (config.keywords || '')
+      };
+    } else {
+      schema = {
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        name: config.title,
+        description: plainDesc,
+        url: siteRoot + '/',
+        author: { '@type': 'Person', name: config.author },
+        inLanguage: 'zh-CN'
+      };
+    }
+    // 防止 JSON 里的 "<" 提前闭合 script 标签
+    const schemaJson = JSON.stringify(schema).replace(/</g, '\\u003c');
   %>
   <title><%= pageTitle %></title>
   <meta name="description" content="<%= plainDesc %>">
   <meta name="author" content="<%= config.author %>">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="<%= canonicalUrl %>">
+
+  <meta property="og:type" content="<%= ogType %>">
+  <meta property="og:site_name" content="<%= config.title %>">
   <meta property="og:title" content="<%= page.title || config.title %>">
   <meta property="og:description" content="<%= plainDesc %>">
-  <meta property="og:image" content="<%= url_for(cover) %>">
+  <meta property="og:url" content="<%= canonicalUrl %>">
+  <meta property="og:image" content="<%= imageUrl %>">
+  <meta property="og:locale" content="zh_CN">
+  <% if (is_post()) { %>
+  <meta property="article:published_time" content="<%= date_xml(page.date) %>">
+  <meta property="article:modified_time" content="<%= date_xml(page.updated || page.date) %>">
+  <% if (page.tags && page.tags.length) { %>
+  <meta property="article:tag" content="<%= page.tags.map(function (t) { return t.name; }).join(', ') %>">
+  <% } %>
+  <% } %>
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="<%= page.title || config.title %>">
+  <meta name="twitter:description" content="<%= plainDesc %>">
+  <meta name="twitter:image" content="<%= imageUrl %>">
+
   <link rel="icon" href="<%= url_for(theme.favicon) %>">
   <link rel="alternate" type="application/atom+xml" title="<%= config.title %>" href="<%= url_for('/atom.xml') %>">
   <link rel="stylesheet" href="<%= url_for('/css/style.css') %>">
-  <% if (is_post()) { %>
+  <% /* KaTeX 按需加载：只有真的渲染出公式的文章才引入 CSS（当前 78 篇里 0 篇用到） */ %>
+  <% if (is_post() && page.content && page.content.indexOf('class="katex') !== -1) { %>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
   <% } %>
+  <script type="application/ld+json"><%- schemaJson %></script>
   <script>
     (function () {
       try {

@@ -5,6 +5,7 @@ categories:
   - RAG
 tags: [RAG]
 description: "会调 LangChain 不等于检索变好。"
+abbrlink: 3366212647
 ---
 
 生态课容易把组件清单当成能力清单。框架提供的是可替换的接口：切分器、检索器、模型客户端。

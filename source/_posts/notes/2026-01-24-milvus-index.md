@@ -5,6 +5,7 @@ categories:
   - Milvus
 tags: [Milvus, RAG]
 description: "先对齐主键，再争论 HNSW 还是 IVF。"
+abbrlink: 2204194509
 ---
 
 维度、度量方式、过滤字段必须和 MySQL 主键对齐。HNSW / IVF 影响召回和延迟，不决定业务正确性。

@@ -5,6 +5,7 @@ categories:
   - How-to-Learn
 tags: [如何学习, RAG]
 description: "平台证明有人会用。自研证明你能改。"
+abbrlink: 3012594868
 ---
 
 Dify、Coze、RAGFlow 适合验证业务要不要这条链路。它们不能替代你理解切分为何断错、权限为何泄漏。

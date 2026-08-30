@@ -1,6 +1,15 @@
 <%
   const cats = page.categories ? page.categories.toArray() : [];
   const tags = page.tags ? page.tags.toArray() : [];
+  // 字数与阅读时长：中英混排按字符数估，约 400 字/分钟
+  const plainLen = String(page.content || '')
+    .replace(/<[^>]+>/g, '')
+    .replace(/\s+/g, '')
+    .length;
+  const readMinutes = Math.max(1, Math.round(plainLen / 400));
+  const dateStr = date(page.date, 'YYYY-MM-DD');
+  const updatedStr = date(page.updated || page.date, 'YYYY-MM-DD');
+  const showUpdated = updatedStr !== dateStr;
   let related = [];
   if (theme.related_posts && tags.length) {
     const tagNames = tags.map(t => t.name);
@@ -17,7 +26,11 @@
       <% cats.forEach(function (c) { %>
         <a class="chip" href="<%= url_for(c.path) %>"><%= c.name %></a>
       <% }) %>
-      <time datetime="<%= date_xml(page.date) %>"><%= date(page.date, 'YYYY-MM-DD') %></time>
+      <time datetime="<%= date_xml(page.date) %>"><%= dateStr %></time>
+      <span><%= plainLen %> 字 · 约 <%= readMinutes %> 分钟</span>
+      <% if (showUpdated) { %>
+        <span>更新于 <%= updatedStr %></span>
+      <% } %>
     </div>
     <h1><%= page.title %></h1>
     <% if (page.description) { %><p class="lede"><%= page.description %></p><% } %>

@@ -15,7 +15,8 @@ function dec(b64) {
 
 // 在 marked 渲染前，把公式替换成 base64 占位符，避免被 Markdown 解析器破坏
 hexo.extend.filter.register('before_post_render', function (data) {
-  if (!data || !data.content) return data;
+  // 短路：全文没有 $ 就没必要跑两轮正则 + base64 编解码
+  if (!data || !data.content || data.content.indexOf('$') === -1) return data;
   // 块级 $$...$$
   data.content = data.content.replace(/\$\$([\s\S]+?)\$\$/g, function (m, tex) {
     return '%%KATEXD:' + enc(tex.trim()) + '%%';

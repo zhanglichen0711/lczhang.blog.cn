@@ -5,6 +5,7 @@ categories:
   - NLP
 tags: [NLP, Transformer, BERT]
 description: 预处理决定模型吃进什么；RNN 解决序列；Attention 和 Transformer 解决长距离依赖。BERT 和 GPT 是同一骨架的两种用法。
+abbrlink: 55663161
 ---
 
 NLP 可以看成一条越来越短的流水线：文本先被切成模型能吃的单元，再变成向量，再进序列模型。2017 年的 Transformer 把「序列计算」从逐步递推改成了可并行的注意力。

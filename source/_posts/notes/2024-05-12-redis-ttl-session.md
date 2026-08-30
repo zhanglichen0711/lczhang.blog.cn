@@ -5,6 +5,7 @@ categories:
   - Redis
 tags: [Redis]
 description: "短时记忆必须带过期。没有 TTL 的会话会变成隐形知识库。"
+abbrlink: 4257454450
 ---
 
 对话记忆、用户草稿、工具中间结果，都应设置过期。按业务定 30 分钟或 24 小时，但必须有数。

@@ -5,6 +5,7 @@ categories:
   - NLP
 tags: [NLP]
 description: "中文分词会改变后续全部统计。领域词必须进自定义词典。"
+abbrlink: 974642383
 ---
 
 预处理的目标是稳定的 DataLoader。中文没有空格，jieba 的精确 / 全模式 / 搜索引擎模式对应不同召回需求。领域专有名词不进词典，就会被切碎。

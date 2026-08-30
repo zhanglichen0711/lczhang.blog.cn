@@ -5,6 +5,7 @@ categories:
   - Machine-Learning
 tags: [机器学习]
 description: "取数、划分、特征、训练、评估，写成固定顺序。"
+abbrlink: 722644444
 ---
 
 课堂案例把波士顿房价或分类数据走一遍，是为了记住顺序，不是为了记住这个数据集。

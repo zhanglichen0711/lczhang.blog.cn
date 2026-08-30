@@ -5,6 +5,7 @@ categories:
   - Machine-Learning
 tags: [机器学习]
 description: "一条走可导损失，一条走距离。标准化往往比换模型更要紧。"
+abbrlink: 1579001655
 ---
 
 线性回归给出正规方程和梯度下降：损失对参数可导就能迭代。KNN 没有显式训练，贵在距离定义和 `k` 的选择。

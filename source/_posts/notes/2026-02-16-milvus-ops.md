@@ -5,6 +5,7 @@ categories:
   - Milvus
 tags: [Milvus]
 description: "删向量不同步，引用就会指向幽灵切片。"
+abbrlink: 2572481623
 ---
 
 文档更新应是：MySQL 写新版本 → upsert 新向量 → 切换当前版本 → 删旧点。顺序反了会出现短暂的双重命中或全空。

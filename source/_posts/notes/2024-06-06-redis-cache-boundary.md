@@ -5,6 +5,7 @@ categories:
   - Redis
 tags: [Redis, RAG]
 description: "Cache embeddings and bounded retrieval candidates, not free-form answers."
+abbrlink: 71712335
 ---
 
 缓存自由生成的答案看起来能省钱，但一次错误会被记住很久——用户会反复看到那条已经作废的回答。更稳的是缓存：

@@ -5,6 +5,7 @@ categories:
   - Milvus
 tags: [Milvus, RAG]
 description: "稠密向量会丢掉精确编号，关键词会丢掉同义说法。"
+abbrlink: 3130585751
 ---
 
 规范文本既有条款号又有口语化问法。只靠稠密向量，用户说错一个编号就漂；只靠关键词，换一种说法就找不到。
