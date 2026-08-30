@@ -11,4 +11,4 @@ description: "Zero init makes neurons symmetric. Kaiming / Xavier keep signals u
 
 建模型的固定动作：继承 `nn.Module`，在 `__init__` 声明层，在 `forward` 写数据流，再选损失和优化器。
 
-全零初始化会让对称神经元学到同一套更新。Kaiming / Xavier 是为了让信号在深度里不至于一开始就消失。
+初始化不是细节。全零会让对称神经元学到同一套更新。Kaiming / Xavier 是为了让信号在深度里不至于一开始就消失或爆炸。

@@ -13,4 +13,6 @@ description: "Clear grads every step. Learning rate beats a fancier block more o
 - Adagrad / RMSProp：按参数自己的历史梯度调步长
 - Adam：两者的常用组合
 
+平坦区域和鞍点是纯 SGD 容易卡住的地方，也是这些方法出现的原因。
+
 Dropout 和 BatchNorm 是训练刹车。应用侧还有更土的刹车：早停、洗标签、低置信度交给规则。
