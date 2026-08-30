@@ -20,6 +20,9 @@
   <link rel="icon" href="<%= url_for(theme.favicon) %>">
   <link rel="alternate" type="application/atom+xml" title="<%= config.title %>" href="<%= url_for('/atom.xml') %>">
   <link rel="stylesheet" href="<%= url_for('/css/style.css') %>">
+  <% if (is_post()) { %>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+  <% } %>
   <script>
     (function () {
       try {

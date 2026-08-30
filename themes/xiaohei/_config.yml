@@ -8,10 +8,12 @@ favicon: /img/favicon.png
 cover: /img/cover.jpg
 wechat_qr: /img/wechat-qr.jpg
 
+# 前两项是板块页，由 scripts/sections.js 按 _posts 下的目录生成（不改动任何文章）
 tabs:
-  笔记: /categories/Python/
-  思考: /categories/Dynamics/
+  学习笔记: /notes/
+  行业思考: /thoughts/
   归档: /archives/
+  关于: /about/
 
 sidebar:
   - id: notes
@@ -45,6 +47,9 @@ social:
 
 giscus:
   enable: true
+  # repo_id / category_id 必须填，否则评论区不渲染（避免留下空标题）
+  # 获取方式：打开 https://giscus.app → 填入仓库 zhanglichen0711/zhanglichen0711.github.io
+  #          → 页面底部「启用 giscus」区块里会生成这两串 ID，复制回来即可
   repo: zhanglichen0711/zhanglichen0711.github.io
   repo_id: ""
   category: Announcements

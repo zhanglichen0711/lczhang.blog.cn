@@ -2,7 +2,6 @@
 title: NLP 笔记：从分词、词向量到 Transformer
 date: 2026-08-10
 categories:
-  - 学习笔记
   - NLP
 tags: [NLP, Transformer, BERT]
 description: 预处理决定模型吃进什么；RNN 解决序列；Attention 和 Transformer 解决长距离依赖。BERT 和 GPT 是同一骨架的两种用法。

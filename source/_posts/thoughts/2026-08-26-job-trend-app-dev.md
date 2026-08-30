@@ -2,8 +2,7 @@
 title: 应用开发岗位在增加什么、减少什么
 date: 2026-08-26
 categories:
-  - 行业思考
-  - 岗位趋势
+  - Job-Trends
 tags: [岗位趋势, 如何学习]
 description: 纯页面封装和只会调聊天 API 都在被压价。中间态是系统集成、评测和数据闭环。
 ---

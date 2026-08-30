@@ -2,8 +2,7 @@
 title: 从机器学习术语到反向传播：深度学习笔记
 date: 2026-07-12
 categories:
-  - 学习笔记
-  - 深度学习
+  - Deep-Learning
 tags: [深度学习, NLP]
 description: 线性回归、树模型和 KNN 解决的是「怎么学」；张量、反向传播和优化器解决的是「深层网络怎么更新」。
 ---

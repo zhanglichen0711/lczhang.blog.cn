@@ -105,7 +105,8 @@ code, pre { font-family: var(--mono); }
   text-decoration: none; padding: 10px 0 8px; border-bottom: 2px solid transparent;
 }
 .top-tabs a:hover { color: var(--text); }
-.top-tabs a:first-child { color: var(--accent); border-bottom-color: var(--accent); }
+/* 高亮由 header.ejs 按当前路径计算，不再硬编码 :first-child */
+.top-tabs a.active { color: var(--accent); border-bottom-color: var(--accent); }
 
 .docs-shell { display: grid; grid-template-columns: 268px minmax(0, 1fr); min-height: calc(100vh - 96px); }
 .sidebar {
@@ -167,7 +168,10 @@ code, pre { font-family: var(--mono); }
 .excerpt { margin: 0; color: var(--muted); }
 .tag-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
 .tag-row a { color: var(--muted); font-family: var(--mono); font-size: 12px; text-decoration: none; }
-.pager { display: flex; justify-content: space-between; margin-top: 24px; font-family: var(--mono); font-size: 13px; }
+.pager { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 28px; font-family: var(--mono); font-size: 13px; }
+.pager a { color: var(--link); text-decoration: none; padding: 4px 10px; border: 1px solid var(--border); border-radius: 6px; }
+.pager a:hover { border-color: var(--link); }
+.pager .pager-info { color: var(--muted); }
 
 .article-head { max-width: 760px; margin-bottom: 22px; }
 .article-head h1 { margin: 8px 0 10px; font-size: 34px; line-height: 1.22; letter-spacing: -0.03em; }
@@ -183,19 +187,120 @@ code, pre { font-family: var(--mono); }
 }
 .article-body table { width: 100%; border-collapse: collapse; font-size: 14px; }
 .article-body th, .article-body td { border: 1px solid var(--border); padding: 8px 10px; }
+.article-body th { background: var(--bg-side); text-align: left; font-weight: 600; }
+
+/* 排除：Hexo 开启 line_number 后，代码块内部是 <table> 布局（gutter 行号 + code 内容）。
+   上面的文章表格规则会命中它，导致代码块外多一圈边框、行号与代码间多一条竖线。 */
+.article-body .highlight table { width: auto; border-collapse: separate; font-size: inherit; }
+.article-body .highlight th,
+.article-body .highlight td { border: 0; padding: 0; vertical-align: top; background: none; font-weight: inherit; }
+.article-body .highlight .gutter pre { padding: 0 14px 0 0; color: #6e7681; text-align: right; -webkit-user-select: none; user-select: none; }
+.article-body .highlight .code pre { padding: 0; }
 
 .highlight, figure.highlight {
   background: var(--code-bg); color: var(--code-text);
   padding: 14px 16px; overflow: auto; font-size: 13px; line-height: 1.6;
 }
+/* 代码块复制按钮 */
+.code-host { position: relative; }
+/* 浏览器默认 figure { margin: 1em 40px }，不清掉代码块会左右各缩进 40px */
+.article-body figure { margin: 1.2em 0; }
+.copy-btn {
+  position: absolute; top: 8px; right: 8px; z-index: 5;
+  border: 1px solid var(--border); background: var(--bg-elev); color: var(--muted);
+  font: 12px var(--mono); padding: 3px 8px; border-radius: 6px; cursor: pointer;
+  opacity: .5;
+  transition: opacity .15s ease, color .15s ease, border-color .15s ease;
+}
+.code-host:hover .copy-btn, .copy-btn:focus { opacity: 1; }
+.copy-btn.copied { color: var(--accent); border-color: var(--accent); opacity: 1; }
+/* 触屏设备不会触发 hover，必须常显，否则手机上永远看不到复制按钮 */
+@media (hover: none) {
+  .copy-btn { opacity: 1; }
+}
+/* Mermaid 图容器 */
+.article-body .mermaid {
+  text-align: center; overflow: auto; padding: 8px 0; background: var(--bg-elev);
+  border: 1px solid var(--border); border-radius: 10px; margin: 1.2em 0;
+}
+.article-body .mermaid svg { max-width: 100%; height: auto; margin: 0 auto; }
 .article-body :not(pre) > code {
   font-size: 0.9em; background: var(--accent-soft); color: var(--accent); padding: 0.1em 0.35em;
 }
+
+/* 代码块语法高亮（GitHub Dark 配色，适配深色代码底，明暗主题一致）
+   重要：_config.yml 里 highlight.hljs=true 时，Hexo 输出的是 hljs-* 前缀类名；
+   hljs=false 时输出旧版裸 token 名（.keyword/.string...）。
+   这里两套选择器都写全，以后切换 hljs 开关都不会再失效。 */
+.highlight, figure.highlight { color: #c9d1d9; }
+
+/* 注释 */
+.highlight .comment, .highlight .quote,
+.highlight .hljs-comment, .highlight .hljs-quote,
+.highlight .hljs-formula, .highlight .hljs-code { color: #8b949e; font-style: italic; }
+
+/* 关键字 */
+.highlight .keyword, .highlight .selector-tag, .highlight .doctag,
+.highlight .template-tag, .highlight .template-variable,
+.highlight .hljs-keyword, .highlight .hljs-selector-tag,
+.highlight .hljs-doctag, .highlight .hljs-template-tag,
+.highlight .hljs-template-variable, .highlight .hljs-type,
+.hljs-meta .hljs-keyword { color: #ff7b72; }
+
+/* 字符串 */
+.highlight .string, .highlight .regexp, .highlight .meta-string,
+.highlight .hljs-string, .highlight .hljs-regexp,
+.hljs-meta .hljs-string { color: #a5d6ff; }
+
+/* 数字 / 属性 / 变量 / 选择器 */
+.highlight .number, .highlight .attr, .highlight .attribute,
+.highlight .variable, .highlight .builtin-name,
+.highlight .hljs-number, .highlight .hljs-attr, .highlight .hljs-attribute,
+.highlight .hljs-variable, .highlight .hljs-literal, .highlight .hljs-operator,
+.highlight .hljs-selector-attr, .highlight .hljs-selector-class,
+.highlight .hljs-selector-id, .highlight .hljs-meta { color: #79c0ff; }
+
+/* 函数名 / 类名 / 标题 */
+.highlight .title, .highlight .title.function_, .highlight .function .title,
+.highlight .class .title,
+.highlight .hljs-title, .highlight .hljs-title.class_,
+.highlight .hljs-title.class_.inherited__, .highlight .hljs-title.function_,
+.highlight .hljs-function .hljs-title { color: #d2a8ff; }
+
+/* 内置函数 / 符号 */
+.highlight .built_in, .highlight .symbol, .highlight .link,
+.highlight .hljs-built_in, .highlight .hljs-symbol { color: #ffa657; }
+
+/* 标签名 / 选择器伪类 */
+.highlight .name, .highlight .tag, .highlight .selector-id, .highlight .selector-class,
+.highlight .hljs-name, .highlight .hljs-tag,
+.highlight .hljs-selector-pseudo, .highlight .hljs-selector-tag { color: #7ee787; }
+
+/* 标题分节 */
+.highlight .section, .highlight .hljs-section { color: #1f6feb; font-weight: 700; }
+
+/* 列表符号 */
+.highlight .bullet, .highlight .hljs-bullet { color: #f2cc60; }
+
+/* 其他 */
+.highlight .params, .highlight .subst,
+.highlight .hljs-params, .highlight .hljs-subst { color: #c9d1d9; }
+.highlight .deletion, .highlight .hljs-deletion { color: #ffdcd7; }
+.highlight .addition, .highlight .hljs-addition { color: #aff5b4; }
+.highlight .emphasis, .highlight .hljs-emphasis { font-style: italic; }
+.highlight .strong, .highlight .hljs-strong { font-weight: 700; }
 
 .toc { position: sticky; top: 112px; font-size: 13px; }
 .toc a { display: block; color: var(--muted); text-decoration: none; padding: 3px 0; }
 .toc a:hover, .toc a.active { color: var(--accent); }
 .toc .toc-h3 { padding-left: 12px; }
+
+/* 移动端折叠目录：桌面端隐藏，≤960px 时替代被隐藏的右侧 .toc */
+.toc-mobile { display: none; }
+.toc-mobile nav a.toc-h3 { padding-left: 14px; }
+
+/* 移动端侧边栏抽屉遮罩 */
+.nav-backdrop { display: none; }
 
 .post-nav {
   max-width: 760px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
@@ -262,6 +367,40 @@ code, pre { font-family: var(--mono); }
   .nav-toggle { display: grid; }
   .article-layout, .docs-hero, .about-card, .related-grid, .post-nav, .links-grid { grid-template-columns: 1fr; }
   .toc { display: none; }
-  .header-search { display: none; }
   .main { padding: 20px 16px 56px; }
+
+  /* 移动端保留搜索入口：收成一个放大镜图标按钮。
+     原来是 display:none，手机上没有任何方式能搜索。 */
+  .header-search {
+    display: flex; flex: 0 0 auto; max-width: none; margin: 0;
+    width: 36px; height: 36px; padding: 0; justify-content: center;
+  }
+  .header-search .search-ph, .header-search kbd { display: none; }
+
+  /* 折叠目录：右侧 .toc 在移动端被隐藏，用它兜住长文导航 */
+  .toc-mobile {
+    display: block; max-width: 760px; margin: 0 0 18px;
+    border: 1px solid var(--border); border-radius: 10px;
+    background: var(--bg-side);
+  }
+  .toc-mobile > summary {
+    cursor: pointer; padding: 10px 14px; font-size: 14px; font-weight: 600;
+    list-style: none;
+  }
+  .toc-mobile > summary::-webkit-details-marker { display: none; }
+  .toc-mobile > summary::after { content: '\25BE'; float: right; color: var(--muted); }
+  .toc-mobile[open] > summary::after { content: '\25B4'; }
+  .toc-mobile > nav { padding: 0 14px 12px; }
+  .toc-mobile nav a {
+    display: block; color: var(--muted); text-decoration: none;
+    padding: 4px 0; font-size: 14px;
+  }
+  .toc-mobile nav a:hover, .toc-mobile nav a.active { color: var(--accent); }
+
+  /* 抽屉遮罩：z-index 34，侧栏是 35，保证侧栏压在遮罩之上 */
+  .nav-backdrop {
+    display: block; position: fixed; top: 96px; left: 0; right: 0; bottom: 0;
+    background: rgba(10, 12, 10, .45); z-index: 34;
+  }
+  .nav-backdrop[hidden] { display: none; }
 }

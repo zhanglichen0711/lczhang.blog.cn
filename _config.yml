@@ -45,7 +45,7 @@ highlight:
   line_number: true
   line_threshold: 0
   wrap: true
-  hljs: false
+  hljs: true
   exclude_languages:
     - mermaid
 prismjs:

@@ -2,8 +2,7 @@
 title: MySQL 笔记：约束、联表和分析函数怎么接到知识库
 date: 2026-05-26
 categories:
-  - 学习笔记
-  - 数据库
+  - MySQL
 tags: [MySQL, RAG]
 description: DDL / DML / DQL 背再多也不如先想清楚：文档、切片、权限和引用主键分别放哪。
 ---

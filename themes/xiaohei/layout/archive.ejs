@@ -25,3 +25,11 @@
     </a>
   <% }) %>
 </section>
+
+<% if (page.total > 1) { %>
+  <nav class="pager">
+    <% if (page.prev) { %><a href="<%= url_for(page.prev_link) %>">Newer</a><% } else { %><span></span><% } %>
+    <span class="pager-info"><%= page.current %> / <%= page.total %></span>
+    <% if (page.next) { %><a href="<%= url_for(page.next_link) %>">Older</a><% } else { %><span></span><% } %>
+  </nav>
+<% } %>

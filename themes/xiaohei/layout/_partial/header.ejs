@@ -29,9 +29,20 @@
     </div>
   </div>
   <% if (theme.tabs) { %>
+  <%
+    // 规范化路径用于比较：去掉 index.html，统一结尾斜杠
+    function normUrl(u) {
+      return String(u || '').replace(/index\.html$/, '').replace(/\/+$/, '/');
+    }
+    var curUrl = normUrl(url_for('/' + (page.path || '')));
+  %>
   <nav class="top-tabs">
-    <% Object.keys(theme.tabs).forEach(function (name) { %>
-      <a href="<%= url_for(theme.tabs[name]) %>"><%= name %></a>
+    <% Object.keys(theme.tabs).forEach(function (name) {
+         var target = normUrl(url_for(theme.tabs[name]));
+         // 归档分页 /archives/page/2/ 也应命中 /archives/
+         var isActive = target !== '/' && curUrl.indexOf(target) === 0;
+    %>
+      <a class="<%= isActive ? 'active' : '' %>" href="<%= url_for(theme.tabs[name]) %>"><%= name %></a>
     <% }) %>
   </nav>
   <% } %>

@@ -2,7 +2,6 @@
 title: Python 学习笔记：从容器语法到能写 LLM 服务
 date: 2026-06-08
 categories:
-  - 学习笔记
   - Python
 tags: [Python, Pandas]
 description: 把基础语法课里真正会反复用到的部分抽出来：容器、函数、面向对象、并发和数据分析三件套。

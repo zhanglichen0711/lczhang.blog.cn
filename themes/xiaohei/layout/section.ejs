@@ -1,0 +1,23 @@
+<section class="archive">
+  <header class="page-head">
+    <p class="eyebrow"><%= page.eyebrow || 'Library' %></p>
+    <h1><%= page.title %></h1>
+    <p><%= (page.posts || []).length %> notes</p>
+  </header>
+  <%
+    let lastYear = '';
+    (page.posts || []).forEach(function (post) {
+      const y = date(post.date, 'YYYY');
+  %>
+    <% if (y !== lastYear) { lastYear = y; %>
+      <h2 class="year"><%= y %></h2>
+    <% } %>
+    <a class="archive-item" href="<%= url_for(post.path) %>">
+      <time><%= date(post.date, 'MM-DD') %></time>
+      <span><%= post.title %></span>
+      <% if (post.categories && post.categories.length) { %>
+        <em><%= post.categories.data[post.categories.length - 1].name %></em>
+      <% } %>
+    </a>
+  <% }) %>
+</section>

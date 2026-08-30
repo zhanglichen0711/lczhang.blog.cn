@@ -30,6 +30,14 @@
     <% } %>
   </header>
 
+  <% /* 移动端折叠目录：桌面端由右侧 .toc 承担，此处 CSS 隐藏 */ %>
+  <% if (theme.toc !== false) { %>
+    <details class="toc-mobile" id="tocMobile">
+      <summary>目录</summary>
+      <nav id="tocNavMobile"></nav>
+    </details>
+  <% } %>
+
   <div class="article-layout">
     <div class="article-body" id="articleBody">
       <%- page.content %>
@@ -66,7 +74,8 @@
   </section>
 <% } %>
 
-<% if (theme.giscus && theme.giscus.enable) { %>
+<% /* repo_id / category_id 缺失时 giscus 会加载失败，只留下一个空标题，故直接不渲染 */ %>
+<% if (theme.giscus && theme.giscus.enable && theme.giscus.repo_id && theme.giscus.category_id) { %>
   <section class="comments" id="comments">
     <h2>Comments</h2>
     <script src="https://giscus.app/client.js"

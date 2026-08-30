@@ -2,7 +2,6 @@
 title: RAG 工程闭环：从切分、混合检索到评测和隔离
 date: 2026-08-21
 categories:
-  - 学习笔记
   - RAG
 tags: [RAG, Milvus, FastAPI]
 description: 最小闭环是「切得可引用、找得回来、必须带出处」。可上线的闭环还要加上意图、版本、隔离、评测和观测。

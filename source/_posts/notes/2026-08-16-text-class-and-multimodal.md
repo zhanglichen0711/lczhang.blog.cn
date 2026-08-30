@@ -2,7 +2,6 @@
 title: 文本层级分类，以及和检测结果怎么融合
 date: 2026-08-16
 categories:
-  - 学习笔记
   - NLP
 tags: [NLP, 深度学习]
 description: 先用 FastText / 随机森林打基线，再用 BERT 做层级分类；和视觉结果冲突时，用置信度决策，而不是让生成模型仲裁一切。

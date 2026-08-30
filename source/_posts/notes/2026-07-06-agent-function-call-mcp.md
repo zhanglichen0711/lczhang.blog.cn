@@ -2,7 +2,6 @@
 title: Agent 笔记：Function Call、MCP 和五种模式
 date: 2026-07-06
 categories:
-  - 学习笔记
   - Agent
 tags: [Agent, MCP, 工具调用]
 description: Function Call 解决「模型如何提出一次调用」；MCP 解决「工具如何描述自己」；Agent 模式决定要不要规划、反思和协作。
