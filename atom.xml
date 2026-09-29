@@ -3,11 +3,11 @@
   <title>小黑程序员</title>
   
   <subtitle>AI大模型应用开发</subtitle>
-  <link href="https://lczhang.blog.cn/atom.xml" rel="self"/>
+  <link href="https://zhanglichen0711.github.io/atom.xml" rel="self"/>
   
-  <link href="https://lczhang.blog.cn/"/>
-  <updated>2026-09-08T15:21:07.699Z</updated>
-  <id>https://lczhang.blog.cn/</id>
+  <link href="https://zhanglichen0711.github.io/"/>
+  <updated>2026-09-29T17:43:33.947Z</updated>
+  <id>https://zhanglichen0711.github.io/</id>
   
   <author>
     <name>zhanglichen</name>
@@ -18,467 +18,467 @@
   
   <entry>
     <title>Kimi K3 与 Qwen3.8-Max：逼近 3 万亿</title>
-    <link href="https://lczhang.blog.cn/posts/2456028425/"/>
-    <id>https://lczhang.blog.cn/posts/2456028425/</id>
+    <link href="https://zhanglichen0711.github.io/posts/2456028425/"/>
+    <id>https://zhanglichen0711.github.io/posts/2456028425/</id>
     <published>2026-07-23T16:00:00.000Z</published>
-    <updated>2026-09-08T15:21:07.699Z</updated>
+    <updated>2026-09-29T17:43:33.947Z</updated>
     
     
     <summary type="html">K3 总参数 2.78 万亿、激活 1040 亿，全球最大开源模型；Qwen3.8-Max 2.4 万亿跟上。</summary>
     
     
     
-    <category term="行业发展" scheme="https://lczhang.blog.cn/categories/%E8%A1%8C%E4%B8%9A%E5%8F%91%E5%B1%95/"/>
+    <category term="行业发展" scheme="https://zhanglichen0711.github.io/categories/%E8%A1%8C%E4%B8%9A%E5%8F%91%E5%B1%95/"/>
     
     
-    <category term="模型发布" scheme="https://lczhang.blog.cn/tags/%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B8%83/"/>
+    <category term="模型发布" scheme="https://zhanglichen0711.github.io/tags/%E6%A8%A1%E5%9E%8B%E5%8F%91%E5%B8%83/"/>
     
-    <category term="Qwen" scheme="https://lczhang.blog.cn/tags/Qwen/"/>
+    <category term="Qwen" scheme="https://zhanglichen0711.github.io/tags/Qwen/"/>
     
-    <category term="Kimi" scheme="https://lczhang.blog.cn/tags/Kimi/"/>
+    <category term="Kimi" scheme="https://zhanglichen0711.github.io/tags/Kimi/"/>
     
   </entry>
   
   <entry>
     <title>生成模型与「旧模型」的分工</title>
-    <link href="https://lczhang.blog.cn/posts/3706578265/"/>
-    <id>https://lczhang.blog.cn/posts/3706578265/</id>
+    <link href="https://zhanglichen0711.github.io/posts/3706578265/"/>
+    <id>https://zhanglichen0711.github.io/posts/3706578265/</id>
     <published>2026-06-23T16:00:00.000Z</published>
-    <updated>2026-09-08T15:21:07.698Z</updated>
+    <updated>2026-09-29T17:43:33.924Z</updated>
     
     
     <summary type="html">分类、检测、检索这些旧模型稳定便宜可解释，生成模型负责语言，分工比取代更划算。</summary>
     
     
     
-    <category term="行业发展" scheme="https://lczhang.blog.cn/categories/%E8%A1%8C%E4%B8%9A%E5%8F%91%E5%B1%95/"/>
+    <category term="行业发展" scheme="https://zhanglichen0711.github.io/categories/%E8%A1%8C%E4%B8%9A%E5%8F%91%E5%B1%95/"/>
     
     
-    <category term="多模态" scheme="https://lczhang.blog.cn/tags/%E5%A4%9A%E6%A8%A1%E6%80%81/"/>
+    <category term="多模态" scheme="https://zhanglichen0711.github.io/tags/%E5%A4%9A%E6%A8%A1%E6%80%81/"/>
     
-    <category term="文本分类" scheme="https://lczhang.blog.cn/tags/%E6%96%87%E6%9C%AC%E5%88%86%E7%B1%BB/"/>
+    <category term="文本分类" scheme="https://zhanglichen0711.github.io/tags/%E6%96%87%E6%9C%AC%E5%88%86%E7%B1%BB/"/>
     
   </entry>
   
   <entry>
     <title>我实际在用的资源与工具</title>
-    <link href="https://lczhang.blog.cn/posts/360424486/"/>
-    <id>https://lczhang.blog.cn/posts/360424486/</id>
+    <link href="https://zhanglichen0711.github.io/posts/360424486/"/>
+    <id>https://zhanglichen0711.github.io/posts/360424486/</id>
     <published>2026-05-27T16:00:00.000Z</published>
-    <updated>2026-09-08T15:21:07.680Z</updated>
+    <updated>2026-09-29T17:43:33.554Z</updated>
     
     
     <summary type="html">按链路推荐而不是按热度推荐：调模型、跑检索、做评测、观测、部署，每环只用顺手的。</summary>
     
     
     
-    <category term="如何学习" scheme="https://lczhang.blog.cn/categories/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/"/>
+    <category term="如何学习" scheme="https://zhanglichen0711.github.io/categories/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/"/>
     
     
-    <category term="资源" scheme="https://lczhang.blog.cn/tags/%E8%B5%84%E6%BA%90/"/>
+    <category term="资源" scheme="https://zhanglichen0711.github.io/tags/%E8%B5%84%E6%BA%90/"/>
     
-    <category term="工具" scheme="https://lczhang.blog.cn/tags/%E5%B7%A5%E5%85%B7/"/>
+    <category term="工具" scheme="https://zhanglichen0711.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
   <entry>
     <title>MySQL 笔记：约束、联表和分析函数怎么接到知识库</title>
-    <link href="https://lczhang.blog.cn/posts/3390242430/"/>
-    <id>https://lczhang.blog.cn/posts/3390242430/</id>
+    <link href="https://zhanglichen0711.github.io/posts/3390242430/"/>
+    <id>https://zhanglichen0711.github.io/posts/3390242430/</id>
     <published>2026-05-25T16:00:00.000Z</published>
-    <updated>2026-08-30T14:09:32.973Z</updated>
+    <updated>2026-09-29T17:43:30.297Z</updated>
     
     
     <summary type="html">DDL / DML / DQL 背再多也不如先想清楚：文档、切片、权限和引用主键分别放哪。</summary>
     
     
     
-    <category term="数据与存储" scheme="https://lczhang.blog.cn/categories/%E6%95%B0%E6%8D%AE%E4%B8%8E%E5%AD%98%E5%82%A8/"/>
+    <category term="数据与存储" scheme="https://zhanglichen0711.github.io/categories/%E6%95%B0%E6%8D%AE%E4%B8%8E%E5%AD%98%E5%82%A8/"/>
     
-    <category term="MySQL" scheme="https://lczhang.blog.cn/categories/%E6%95%B0%E6%8D%AE%E4%B8%8E%E5%AD%98%E5%82%A8/MySQL/"/>
+    <category term="MySQL" scheme="https://zhanglichen0711.github.io/categories/%E6%95%B0%E6%8D%AE%E4%B8%8E%E5%AD%98%E5%82%A8/MySQL/"/>
     
     
-    <category term="RAG" scheme="https://lczhang.blog.cn/tags/RAG/"/>
+    <category term="RAG" scheme="https://zhanglichen0711.github.io/tags/RAG/"/>
     
-    <category term="MySQL" scheme="https://lczhang.blog.cn/tags/MySQL/"/>
+    <category term="MySQL" scheme="https://zhanglichen0711.github.io/tags/MySQL/"/>
     
   </entry>
   
   <entry>
     <title>参数竞赛回归：DeepSeek V4-Pro 与文心 5.0</title>
-    <link href="https://lczhang.blog.cn/posts/3642580592/"/>
-    <id>https://lczhang.blog.cn/posts/3642580592/</id>
+    <link href="https://zhanglichen0711.github.io/posts/3642580592/"/>
+    <id>https://zhanglichen0711.github.io/posts/3642580592/</id>
     <published>2026-05-01T16:00:00.000Z</published>
-    <updated>2026-09-08T15:21:07.697Z</updated>
+    <updated>2026-09-29T17:43:33.903Z</updated>
     
     
     <summary type="html">V4-Pro 1.6 万亿激活 490 亿、文心 5.0 达 2.4 万亿——一年前的小参数路线被推翻了吗。</summary>
     
     
     
-    <category term="行业发展" scheme="https://lczhang.blog.cn/categories/%E8%A1%8C%E4%B8%9A%E5%8F%91%E5%B1%95/"/>
+    <category term="行业发展" scheme="https://zhanglichen0711.github.io/categories/%E8%A1%8C%E4%B8%9A%E5%8F%91%E5%B1%95/"/>
     
     
-    <category term="DeepSeek" scheme="https://lczhang.blog.cn/tags/DeepSeek/"/>
+    <category term="DeepSeek" scheme="https://zhanglichen0711.github.io/tags/DeepSeek/"/>
     
-    <category term="文心" scheme="https://lczhang.blog.cn/tags/%E6%96%87%E5%BF%83/"/>
+    <category term="文心" scheme="https://zhanglichen0711.github.io/tags/%E6%96%87%E5%BF%83/"/>
     
   </entry>
   
   <entry>
     <title>学 AI 应用，真正能带走的是什么</title>
-    <link href="https://lczhang.blog.cn/posts/3316085745/"/>
-    <id>https://lczhang.blog.cn/posts/3316085745/</id>
+    <link href="https://zhanglichen0711.github.io/posts/3316085745/"/>
+    <id>https://zhanglichen0711.github.io/posts/3316085745/</id>
     <published>2026-04-01T16:00:00.000Z</published>
-    <updated>2026-09-08T15:21:07.678Z</updated>
+    <updated>2026-09-29T17:43:33.533Z</updated>
     
     
     <summary type="html">框架每周更新，能带走的是归因能力和回归集——模型名会过时，链路不会。</summary>
     
     
     
-    <category term="如何学习" scheme="https://lczhang.blog.cn/categories/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/"/>
+    <category term="如何学习" scheme="https://zhanglichen0711.github.io/categories/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/"/>
     
     
-    <category term="如何学习" scheme="https://lczhang.blog.cn/tags/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/"/>
+    <category term="如何学习" scheme="https://zhanglichen0711.github.io/tags/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/"/>
     
-    <category term="方法论" scheme="https://lczhang.blog.cn/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
+    <category term="方法论" scheme="https://zhanglichen0711.github.io/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
     
   </entry>
   
   <entry>
     <title>Milvus 实战：搭建企业知识库检索服务</title>
-    <link href="https://lczhang.blog.cn/posts/4198743953/"/>
-    <id>https://lczhang.blog.cn/posts/4198743953/</id>
+    <link href="https://zhanglichen0711.github.io/posts/4198743953/"/>
+    <id>https://zhanglichen0711.github.io/posts/4198743953/</id>
     <published>2026-03-11T16:00:00.000Z</published>
-    <updated>2026-09-08T12:37:19.555Z</updated>
+    <updated>2026-09-29T17:43:30.036Z</updated>
     
     
     <summary type="html">把系列知识组装成完整的企业知识库：入库管线、混合检索、权限过滤、精排，一条链路交付。</summary>
     
     
     
-    <category term="数据与存储" scheme="https://lczhang.blog.cn/categories/%E6%95%B0%E6%8D%AE%E4%B8%8E%E5%AD%98%E5%82%A8/"/>
+    <category term="数据与存储" scheme="https://zhanglichen0711.github.io/categories/%E6%95%B0%E6%8D%AE%E4%B8%8E%E5%AD%98%E5%82%A8/"/>
     
-    <category term="Milvus" scheme="https://lczhang.blog.cn/categories/%E6%95%B0%E6%8D%AE%E4%B8%8E%E5%AD%98%E5%82%A8/Milvus/"/>
+    <category term="Milvus" scheme="https://zhanglichen0711.github.io/categories/%E6%95%B0%E6%8D%AE%E4%B8%8E%E5%AD%98%E5%82%A8/Milvus/"/>
     
     
-    <category term="实战" scheme="https://lczhang.blog.cn/tags/%E5%AE%9E%E6%88%98/"/>
+    <category term="实战" scheme="https://zhanglichen0711.github.io/tags/%E5%AE%9E%E6%88%98/"/>
     
-    <category term="Milvus" scheme="https://lczhang.blog.cn/tags/Milvus/"/>
+    <category term="Milvus" scheme="https://zhanglichen0711.github.io/tags/Milvus/"/>
     
-    <category term="知识库" scheme="https://lczhang.blog.cn/tags/%E7%9F%A5%E8%AF%86%E5%BA%93/"/>
+    <category term="知识库" scheme="https://zhanglichen0711.github.io/tags/%E7%9F%A5%E8%AF%86%E5%BA%93/"/>
     
   </entry>
   
   <entry>
     <title>我的学习路线图：从 notes 反推</title>
-    <link href="https://lczhang.blog.cn/posts/1507537554/"/>
-    <id>https://lczhang.blog.cn/posts/1507537554/</id>
+    <link href="https://zhanglichen0711.github.io/posts/1507537554/"/>
+    <id>https://zhanglichen0711.github.io/posts/1507537554/</id>
     <published>2026-03-05T16:00:00.000Z</published>
-    <updated>2026-09-08T15:21:07.677Z</updated>
+    <updated>2026-09-29T17:43:33.512Z</updated>
     
     
     <summary type="html">这个博客的技术笔记本身就是一条路线图：从语言到检索、从训练到部署，按链路串起来的。</summary>
     
     
     
-    <category term="如何学习" scheme="https://lczhang.blog.cn/categories/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/"/>
+    <category term="如何学习" scheme="https://zhanglichen0711.github.io/categories/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/"/>
     
     
-    <category term="学习路线" scheme="https://lczhang.blog.cn/tags/%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/"/>
+    <category term="学习路线" scheme="https://zhanglichen0711.github.io/tags/%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/"/>
     
-    <category term="复盘" scheme="https://lczhang.blog.cn/tags/%E5%A4%8D%E7%9B%98/"/>
+    <category term="复盘" scheme="https://zhanglichen0711.github.io/tags/%E5%A4%8D%E7%9B%98/"/>
     
   </entry>
   
   <entry>
     <title>Milvus 运维：备份、监控与横向扩展</title>
-    <link href="https://lczhang.blog.cn/posts/1166434641/"/>
-    <id>https://lczhang.blog.cn/posts/1166434641/</id>
+    <link href="https://zhanglichen0711.github.io/posts/1166434641/"/>
+    <id>https://zhanglichen0711.github.io/posts/1166434641/</id>
     <published>2026-03-04T16:00:00.000Z</published>
-    <updated>2026-09-08T12:37:00.581Z</updated>
+    <updated>2026-09-29T17:43:30.014Z</updated>
     
     
     <summary type="html">知识库是资产，备份与监控不能省：Milvus 的备份机制、观测指标与扩展路径。</summary>
     
     
     
-    <category term="数据与存储" scheme="https://lczhang.blog.cn/categories/%E6%95%B0%E6%8D%AE%E4%B8%8E%E5%AD%98%E5%82%A8/"/>
+    <category term="数据与存储" scheme="https://zhanglichen0711.github.io/categories/%E6%95%B0%E6%8D%AE%E4%B8%8E%E5%AD%98%E5%82%A8/"/>
     
-    <category term="Milvus" scheme="https://lczhang.blog.cn/categories/%E6%95%B0%E6%8D%AE%E4%B8%8E%E5%AD%98%E5%82%A8/Milvus/"/>
+    <category term="Milvus" scheme="https://zhanglichen0711.github.io/categories/%E6%95%B0%E6%8D%AE%E4%B8%8E%E5%AD%98%E5%82%A8/Milvus/"/>
     
     
-    <category term="Milvus" scheme="https://lczhang.blog.cn/tags/Milvus/"/>
+    <category term="Milvus" scheme="https://zhanglichen0711.github.io/tags/Milvus/"/>
     
-    <category term="运维" scheme="https://lczhang.blog.cn/tags/%E8%BF%90%E7%BB%B4/"/>
+    <category term="运维" scheme="https://zhanglichen0711.github.io/tags/%E8%BF%90%E7%BB%B4/"/>
     
   </entry>
   
   <entry>
     <title>实战：搭一层生产级 LLM 安全防线</title>
-    <link href="https://lczhang.blog.cn/posts/1686365115/"/>
-    <id>https://lczhang.blog.cn/posts/1686365115/</id>
+    <link href="https://zhanglichen0711.github.io/posts/1686365115/"/>
+    <id>https://zhanglichen0711.github.io/posts/1686365115/</id>
     <published>2026-03-01T16:00:00.000Z</published>
-    <updated>2026-09-08T13:33:56.060Z</updated>
+    <updated>2026-09-29T17:43:29.794Z</updated>
     
     
     <summary type="html">输入、输出、动作、数据四道闸门串成一条完整防线，可直接照抄。</summary>
     
     
     
-    <category term="工程化与运维" scheme="https://lczhang.blog.cn/categories/%E5%B7%A5%E7%A8%8B%E5%8C%96%E4%B8%8E%E8%BF%90%E7%BB%B4/"/>
+    <category term="工程化与运维" scheme="https://zhanglichen0711.github.io/categories/%E5%B7%A5%E7%A8%8B%E5%8C%96%E4%B8%8E%E8%BF%90%E7%BB%B4/"/>
     
-    <category term="Safety" scheme="https://lczhang.blog.cn/categories/%E5%B7%A5%E7%A8%8B%E5%8C%96%E4%B8%8E%E8%BF%90%E7%BB%B4/Safety/"/>
+    <category term="Safety" scheme="https://zhanglichen0711.github.io/categories/%E5%B7%A5%E7%A8%8B%E5%8C%96%E4%B8%8E%E8%BF%90%E7%BB%B4/Safety/"/>
     
     
-    <category term="实战" scheme="https://lczhang.blog.cn/tags/%E5%AE%9E%E6%88%98/"/>
+    <category term="实战" scheme="https://zhanglichen0711.github.io/tags/%E5%AE%9E%E6%88%98/"/>
     
-    <category term="安全" scheme="https://lczhang.blog.cn/tags/%E5%AE%89%E5%85%A8/"/>
+    <category term="安全" scheme="https://zhanglichen0711.github.io/tags/%E5%AE%89%E5%85%A8/"/>
     
   </entry>
   
   <entry>
     <title>Milvus Rerank：用精排把召回变成相关</title>
-    <link href="https://lczhang.blog.cn/posts/2998041761/"/>
-    <id>https://lczhang.blog.cn/posts/2998041761/</id>
+    <link href="https://zhanglichen0711.github.io/posts/2998041761/"/>
+    <id>https://zhanglichen0711.github.io/posts/2998041761/</id>
     <published>2026-02-26T16:00:00.000Z</published>
-    <updated>2026-09-08T12:36:42.447Z</updated>
+    <updated>2026-09-29T17:43:29.992Z</updated>
     
     
     <summary type="html">召回要宽、进 LLM 的要精：交叉编码器如何把 TopK 候选精排成真正可用的上下文。</summary>
     
     
     
-    <category term="数据与存储" scheme="https://lczhang.blog.cn/categories/%E6%95%B0%E6%8D%AE%E4%B8%8E%E5%AD%98%E5%82%A8/"/>
+    <category term="数据与存储" scheme="https://zhanglichen0711.github.io/categories/%E6%95%B0%E6%8D%AE%E4%B8%8E%E5%AD%98%E5%82%A8/"/>
     
-    <category term="Milvus" scheme="https://lczhang.blog.cn/categories/%E6%95%B0%E6%8D%AE%E4%B8%8E%E5%AD%98%E5%82%A8/Milvus/"/>
+    <category term="Milvus" scheme="https://zhanglichen0711.github.io/categories/%E6%95%B0%E6%8D%AE%E4%B8%8E%E5%AD%98%E5%82%A8/Milvus/"/>
     
     
-    <category term="Milvus" scheme="https://lczhang.blog.cn/tags/Milvus/"/>
+    <category term="Milvus" scheme="https://zhanglichen0711.github.io/tags/Milvus/"/>
     
-    <category term="Rerank" scheme="https://lczhang.blog.cn/tags/Rerank/"/>
+    <category term="Rerank" scheme="https://zhanglichen0711.github.io/tags/Rerank/"/>
     
-    <category term="精排" scheme="https://lczhang.blog.cn/tags/%E7%B2%BE%E6%8E%92/"/>
+    <category term="精排" scheme="https://zhanglichen0711.github.io/tags/%E7%B2%BE%E6%8E%92/"/>
     
   </entry>
   
   <entry>
     <title>Milvus 索引与检索调优：从召回率到延迟</title>
-    <link href="https://lczhang.blog.cn/posts/3010174516/"/>
-    <id>https://lczhang.blog.cn/posts/3010174516/</id>
+    <link href="https://zhanglichen0711.github.io/posts/3010174516/"/>
+    <id>https://zhanglichen0711.github.io/posts/3010174516/</id>
     <published>2026-02-19T16:00:00.000Z</published>
-    <updated>2026-09-08T12:36:22.223Z</updated>
+    <updated>2026-09-29T17:43:29.971Z</updated>
     
     
     <summary type="html">召回率、延迟、内存三角怎么权衡，索引参数与查询参数如何系统化调优。</summary>
     
     
     
-    <category term="数据与存储" scheme="https://lczhang.blog.cn/categories/%E6%95%B0%E6%8D%AE%E4%B8%8E%E5%AD%98%E5%82%A8/"/>
+    <category term="数据与存储" scheme="https://zhanglichen0711.github.io/categories/%E6%95%B0%E6%8D%AE%E4%B8%8E%E5%AD%98%E5%82%A8/"/>
     
-    <category term="Milvus" scheme="https://lczhang.blog.cn/categories/%E6%95%B0%E6%8D%AE%E4%B8%8E%E5%AD%98%E5%82%A8/Milvus/"/>
+    <category term="Milvus" scheme="https://zhanglichen0711.github.io/categories/%E6%95%B0%E6%8D%AE%E4%B8%8E%E5%AD%98%E5%82%A8/Milvus/"/>
     
     
-    <category term="Milvus" scheme="https://lczhang.blog.cn/tags/Milvus/"/>
+    <category term="Milvus" scheme="https://zhanglichen0711.github.io/tags/Milvus/"/>
     
-    <category term="调优" scheme="https://lczhang.blog.cn/tags/%E8%B0%83%E4%BC%98/"/>
+    <category term="调优" scheme="https://zhanglichen0711.github.io/tags/%E8%B0%83%E4%BC%98/"/>
     
-    <category term="召回率" scheme="https://lczhang.blog.cn/tags/%E5%8F%AC%E5%9B%9E%E7%8E%87/"/>
+    <category term="召回率" scheme="https://zhanglichen0711.github.io/tags/%E5%8F%AC%E5%9B%9E%E7%8E%87/"/>
     
   </entry>
   
   <entry>
     <title>输出校验与护栏设计</title>
-    <link href="https://lczhang.blog.cn/posts/465487424/"/>
-    <id>https://lczhang.blog.cn/posts/465487424/</id>
+    <link href="https://zhanglichen0711.github.io/posts/465487424/"/>
+    <id>https://zhanglichen0711.github.io/posts/465487424/</id>
     <published>2026-02-17T16:00:00.000Z</published>
-    <updated>2026-09-08T13:33:56.055Z</updated>
+    <updated>2026-09-29T17:43:29.773Z</updated>
     
     
     <summary type="html">输出结构化、内容过策略、格式强校验——在出口装一套护栏。</summary>
     
     
     
-    <category term="工程化与运维" scheme="https://lczhang.blog.cn/categories/%E5%B7%A5%E7%A8%8B%E5%8C%96%E4%B8%8E%E8%BF%90%E7%BB%B4/"/>
+    <category term="工程化与运维" scheme="https://zhanglichen0711.github.io/categories/%E5%B7%A5%E7%A8%8B%E5%8C%96%E4%B8%8E%E8%BF%90%E7%BB%B4/"/>
     
-    <category term="Safety" scheme="https://lczhang.blog.cn/categories/%E5%B7%A5%E7%A8%8B%E5%8C%96%E4%B8%8E%E8%BF%90%E7%BB%B4/Safety/"/>
+    <category term="Safety" scheme="https://zhanglichen0711.github.io/categories/%E5%B7%A5%E7%A8%8B%E5%8C%96%E4%B8%8E%E8%BF%90%E7%BB%B4/Safety/"/>
     
     
-    <category term="安全" scheme="https://lczhang.blog.cn/tags/%E5%AE%89%E5%85%A8/"/>
+    <category term="安全" scheme="https://zhanglichen0711.github.io/tags/%E5%AE%89%E5%85%A8/"/>
     
-    <category term="Guardrails" scheme="https://lczhang.blog.cn/tags/Guardrails/"/>
+    <category term="Guardrails" scheme="https://zhanglichen0711.github.io/tags/Guardrails/"/>
     
   </entry>
   
   <entry>
     <title>Milvus 混合检索：稠密向量 + BM25 稀疏</title>
-    <link href="https://lczhang.blog.cn/posts/3827348459/"/>
-    <id>https://lczhang.blog.cn/posts/3827348459/</id>
+    <link href="https://zhanglichen0711.github.io/posts/3827348459/"/>
+    <id>https://zhanglichen0711.github.io/posts/3827348459/</id>
     <published>2026-02-13T16:00:00.000Z</published>
-    <updated>2026-09-08T12:36:02.559Z</updated>
+    <updated>2026-09-29T17:43:29.948Z</updated>
     
     
     <summary type="html">语义检索漏精确词、关键词检索漏语义，Milvus 内置 Sparse-BM25 把两条路合进一个集合。</summary>
     
     
     
-    <category term="数据与存储" scheme="https://lczhang.blog.cn/categories/%E6%95%B0%E6%8D%AE%E4%B8%8E%E5%AD%98%E5%82%A8/"/>
+    <category term="数据与存储" scheme="https://zhanglichen0711.github.io/categories/%E6%95%B0%E6%8D%AE%E4%B8%8E%E5%AD%98%E5%82%A8/"/>
     
-    <category term="Milvus" scheme="https://lczhang.blog.cn/categories/%E6%95%B0%E6%8D%AE%E4%B8%8E%E5%AD%98%E5%82%A8/Milvus/"/>
+    <category term="Milvus" scheme="https://zhanglichen0711.github.io/categories/%E6%95%B0%E6%8D%AE%E4%B8%8E%E5%AD%98%E5%82%A8/Milvus/"/>
     
     
-    <category term="混合检索" scheme="https://lczhang.blog.cn/tags/%E6%B7%B7%E5%90%88%E6%A3%80%E7%B4%A2/"/>
+    <category term="混合检索" scheme="https://zhanglichen0711.github.io/tags/%E6%B7%B7%E5%90%88%E6%A3%80%E7%B4%A2/"/>
     
-    <category term="Milvus" scheme="https://lczhang.blog.cn/tags/Milvus/"/>
+    <category term="Milvus" scheme="https://zhanglichen0711.github.io/tags/Milvus/"/>
     
-    <category term="BM25" scheme="https://lczhang.blog.cn/tags/BM25/"/>
+    <category term="BM25" scheme="https://zhanglichen0711.github.io/tags/BM25/"/>
     
   </entry>
   
   <entry>
     <title>开源模型与 API：数据留在哪边才是真问题</title>
-    <link href="https://lczhang.blog.cn/posts/3528958076/"/>
-    <id>https://lczhang.blog.cn/posts/3528958076/</id>
+    <link href="https://zhanglichen0711.github.io/posts/3528958076/"/>
+    <id>https://zhanglichen0711.github.io/posts/3528958076/</id>
     <published>2026-02-09T16:00:00.000Z</published>
-    <updated>2026-09-08T15:21:07.696Z</updated>
+    <updated>2026-09-29T17:43:33.881Z</updated>
     
     
     <summary type="html">比分数更重要的是数据归属：调 API 省事但数据出境，开源可自托管但维护是你的事。</summary>
     
     
     
-    <category term="行业发展" scheme="https://lczhang.blog.cn/categories/%E8%A1%8C%E4%B8%9A%E5%8F%91%E5%B1%95/"/>
+    <category term="行业发展" scheme="https://zhanglichen0711.github.io/categories/%E8%A1%8C%E4%B8%9A%E5%8F%91%E5%B1%95/"/>
     
     
-    <category term="开源模型" scheme="https://lczhang.blog.cn/tags/%E5%BC%80%E6%BA%90%E6%A8%A1%E5%9E%8B/"/>
+    <category term="开源模型" scheme="https://zhanglichen0711.github.io/tags/%E5%BC%80%E6%BA%90%E6%A8%A1%E5%9E%8B/"/>
     
-    <category term="API" scheme="https://lczhang.blog.cn/tags/API/"/>
+    <category term="API" scheme="https://zhanglichen0711.github.io/tags/API/"/>
     
   </entry>
   
   <entry>
     <title>Milvus 检索与过滤：search 与 expr 权限下推</title>
-    <link href="https://lczhang.blog.cn/posts/2328648847/"/>
-    <id>https://lczhang.blog.cn/posts/2328648847/</id>
+    <link href="https://zhanglichen0711.github.io/posts/2328648847/"/>
+    <id>https://zhanglichen0711.github.io/posts/2328648847/</id>
     <published>2026-02-06T16:00:00.000Z</published>
-    <updated>2026-09-08T12:35:41.980Z</updated>
+    <updated>2026-09-29T17:43:29.927Z</updated>
     
     
     <summary type="html">search 的完整参数、expr 表达式过滤与权限下推——把部门角色过滤做进数据库层。</summary>
     
     
     
-    <category term="数据与存储" scheme="https://lczhang.blog.cn/categories/%E6%95%B0%E6%8D%AE%E4%B8%8E%E5%AD%98%E5%82%A8/"/>
+    <category term="数据与存储" scheme="https://zhanglichen0711.github.io/categories/%E6%95%B0%E6%8D%AE%E4%B8%8E%E5%AD%98%E5%82%A8/"/>
     
-    <category term="Milvus" scheme="https://lczhang.blog.cn/categories/%E6%95%B0%E6%8D%AE%E4%B8%8E%E5%AD%98%E5%82%A8/Milvus/"/>
+    <category term="Milvus" scheme="https://zhanglichen0711.github.io/categories/%E6%95%B0%E6%8D%AE%E4%B8%8E%E5%AD%98%E5%82%A8/Milvus/"/>
     
     
-    <category term="Milvus" scheme="https://lczhang.blog.cn/tags/Milvus/"/>
+    <category term="Milvus" scheme="https://zhanglichen0711.github.io/tags/Milvus/"/>
     
-    <category term="检索" scheme="https://lczhang.blog.cn/tags/%E6%A3%80%E7%B4%A2/"/>
+    <category term="检索" scheme="https://zhanglichen0711.github.io/tags/%E6%A3%80%E7%B4%A2/"/>
     
-    <category term="过滤" scheme="https://lczhang.blog.cn/tags/%E8%BF%87%E6%BB%A4/"/>
+    <category term="过滤" scheme="https://zhanglichen0711.github.io/tags/%E8%BF%87%E6%BB%A4/"/>
     
   </entry>
   
   <entry>
     <title>数据隐私与脱敏合规</title>
-    <link href="https://lczhang.blog.cn/posts/3544841612/"/>
-    <id>https://lczhang.blog.cn/posts/3544841612/</id>
+    <link href="https://zhanglichen0711.github.io/posts/3544841612/"/>
+    <id>https://zhanglichen0711.github.io/posts/3544841612/</id>
     <published>2026-02-03T16:00:00.000Z</published>
-    <updated>2026-09-08T13:33:56.054Z</updated>
+    <updated>2026-09-29T17:43:29.751Z</updated>
     
     
     <summary type="html">PII 进模型前先处理，权限边界在架构上划死，别指望模型守口如瓶。</summary>
     
     
     
-    <category term="工程化与运维" scheme="https://lczhang.blog.cn/categories/%E5%B7%A5%E7%A8%8B%E5%8C%96%E4%B8%8E%E8%BF%90%E7%BB%B4/"/>
+    <category term="工程化与运维" scheme="https://zhanglichen0711.github.io/categories/%E5%B7%A5%E7%A8%8B%E5%8C%96%E4%B8%8E%E8%BF%90%E7%BB%B4/"/>
     
-    <category term="Safety" scheme="https://lczhang.blog.cn/categories/%E5%B7%A5%E7%A8%8B%E5%8C%96%E4%B8%8E%E8%BF%90%E7%BB%B4/Safety/"/>
+    <category term="Safety" scheme="https://zhanglichen0711.github.io/categories/%E5%B7%A5%E7%A8%8B%E5%8C%96%E4%B8%8E%E8%BF%90%E7%BB%B4/Safety/"/>
     
     
-    <category term="安全" scheme="https://lczhang.blog.cn/tags/%E5%AE%89%E5%85%A8/"/>
+    <category term="安全" scheme="https://zhanglichen0711.github.io/tags/%E5%AE%89%E5%85%A8/"/>
     
-    <category term="隐私" scheme="https://lczhang.blog.cn/tags/%E9%9A%90%E7%A7%81/"/>
+    <category term="隐私" scheme="https://zhanglichen0711.github.io/tags/%E9%9A%90%E7%A7%81/"/>
     
-    <category term="脱敏" scheme="https://lczhang.blog.cn/tags/%E8%84%B1%E6%95%8F/"/>
+    <category term="脱敏" scheme="https://zhanglichen0711.github.io/tags/%E8%84%B1%E6%95%8F/"/>
     
   </entry>
   
   <entry>
     <title>Milvus 数据写入：insert、upsert 与分段管理</title>
-    <link href="https://lczhang.blog.cn/posts/1388163432/"/>
-    <id>https://lczhang.blog.cn/posts/1388163432/</id>
+    <link href="https://zhanglichen0711.github.io/posts/1388163432/"/>
+    <id>https://zhanglichen0711.github.io/posts/1388163432/</id>
     <published>2026-01-31T16:00:00.000Z</published>
-    <updated>2026-09-08T12:35:25.235Z</updated>
+    <updated>2026-09-29T17:43:29.906Z</updated>
     
     
     <summary type="html">批量写入、增量更新、删除与分段（Segment）机制——理解数据的底层流转。</summary>
     
     
     
-    <category term="数据与存储" scheme="https://lczhang.blog.cn/categories/%E6%95%B0%E6%8D%AE%E4%B8%8E%E5%AD%98%E5%82%A8/"/>
+    <category term="数据与存储" scheme="https://zhanglichen0711.github.io/categories/%E6%95%B0%E6%8D%AE%E4%B8%8E%E5%AD%98%E5%82%A8/"/>
     
-    <category term="Milvus" scheme="https://lczhang.blog.cn/categories/%E6%95%B0%E6%8D%AE%E4%B8%8E%E5%AD%98%E5%82%A8/Milvus/"/>
-    
-    
-    <category term="Milvus" scheme="https://lczhang.blog.cn/tags/Milvus/"/>
-    
-    <category term="写入" scheme="https://lczhang.blog.cn/tags/%E5%86%99%E5%85%A5/"/>
-    
-    <category term="upsert" scheme="https://lczhang.blog.cn/tags/upsert/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>越狱攻击与内容安全审核</title>
-    <link href="https://lczhang.blog.cn/posts/2539789672/"/>
-    <id>https://lczhang.blog.cn/posts/2539789672/</id>
-    <published>2026-01-24T16:00:00.000Z</published>
-    <updated>2026-09-08T13:33:56.052Z</updated>
+    <category term="Milvus" scheme="https://zhanglichen0711.github.io/categories/%E6%95%B0%E6%8D%AE%E4%B8%8E%E5%AD%98%E5%82%A8/Milvus/"/>
     
     
-    <summary type="html">越狱绕过对齐，审核拦违规输出——面向用户前两道必答题。</summary>
+    <category term="Milvus" scheme="https://zhanglichen0711.github.io/tags/Milvus/"/>
     
+    <category term="写入" scheme="https://zhanglichen0711.github.io/tags/%E5%86%99%E5%85%A5/"/>
     
-    
-    <category term="工程化与运维" scheme="https://lczhang.blog.cn/categories/%E5%B7%A5%E7%A8%8B%E5%8C%96%E4%B8%8E%E8%BF%90%E7%BB%B4/"/>
-    
-    <category term="Safety" scheme="https://lczhang.blog.cn/categories/%E5%B7%A5%E7%A8%8B%E5%8C%96%E4%B8%8E%E8%BF%90%E7%BB%B4/Safety/"/>
-    
-    
-    <category term="安全" scheme="https://lczhang.blog.cn/tags/%E5%AE%89%E5%85%A8/"/>
-    
-    <category term="越狱" scheme="https://lczhang.blog.cn/tags/%E8%B6%8A%E7%8B%B1/"/>
-    
-    <category term="内容审核" scheme="https://lczhang.blog.cn/tags/%E5%86%85%E5%AE%B9%E5%AE%A1%E6%A0%B8/"/>
+    <category term="upsert" scheme="https://zhanglichen0711.github.io/tags/upsert/"/>
     
   </entry>
   
   <entry>
     <title>Milvus 集合与字段设计：主键、向量与标量</title>
-    <link href="https://lczhang.blog.cn/posts/3382324434/"/>
-    <id>https://lczhang.blog.cn/posts/3382324434/</id>
+    <link href="https://zhanglichen0711.github.io/posts/3382324434/"/>
+    <id>https://zhanglichen0711.github.io/posts/3382324434/</id>
     <published>2026-01-24T16:00:00.000Z</published>
-    <updated>2026-09-08T12:35:09.005Z</updated>
+    <updated>2026-09-29T17:43:29.863Z</updated>
     
     
     <summary type="html">集合的 schema 怎么设计：主键策略、向量维度、标量元数据字段，设计决定检索质量上限。</summary>
     
     
     
-    <category term="数据与存储" scheme="https://lczhang.blog.cn/categories/%E6%95%B0%E6%8D%AE%E4%B8%8E%E5%AD%98%E5%82%A8/"/>
+    <category term="数据与存储" scheme="https://zhanglichen0711.github.io/categories/%E6%95%B0%E6%8D%AE%E4%B8%8E%E5%AD%98%E5%82%A8/"/>
     
-    <category term="Milvus" scheme="https://lczhang.blog.cn/categories/%E6%95%B0%E6%8D%AE%E4%B8%8E%E5%AD%98%E5%82%A8/Milvus/"/>
+    <category term="Milvus" scheme="https://zhanglichen0711.github.io/categories/%E6%95%B0%E6%8D%AE%E4%B8%8E%E5%AD%98%E5%82%A8/Milvus/"/>
     
     
-    <category term="Milvus" scheme="https://lczhang.blog.cn/tags/Milvus/"/>
+    <category term="Milvus" scheme="https://zhanglichen0711.github.io/tags/Milvus/"/>
     
-    <category term="schema" scheme="https://lczhang.blog.cn/tags/schema/"/>
+    <category term="schema" scheme="https://zhanglichen0711.github.io/tags/schema/"/>
     
-    <category term="字段设计" scheme="https://lczhang.blog.cn/tags/%E5%AD%97%E6%AE%B5%E8%AE%BE%E8%AE%A1/"/>
+    <category term="字段设计" scheme="https://zhanglichen0711.github.io/tags/%E5%AD%97%E6%AE%B5%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>越狱攻击与内容安全审核</title>
+    <link href="https://zhanglichen0711.github.io/posts/2539789672/"/>
+    <id>https://zhanglichen0711.github.io/posts/2539789672/</id>
+    <published>2026-01-24T16:00:00.000Z</published>
+    <updated>2026-09-29T17:43:29.729Z</updated>
+    
+    
+    <summary type="html">越狱绕过对齐，审核拦违规输出——面向用户前两道必答题。</summary>
+    
+    
+    
+    <category term="工程化与运维" scheme="https://zhanglichen0711.github.io/categories/%E5%B7%A5%E7%A8%8B%E5%8C%96%E4%B8%8E%E8%BF%90%E7%BB%B4/"/>
+    
+    <category term="Safety" scheme="https://zhanglichen0711.github.io/categories/%E5%B7%A5%E7%A8%8B%E5%8C%96%E4%B8%8E%E8%BF%90%E7%BB%B4/Safety/"/>
+    
+    
+    <category term="安全" scheme="https://zhanglichen0711.github.io/tags/%E5%AE%89%E5%85%A8/"/>
+    
+    <category term="越狱" scheme="https://zhanglichen0711.github.io/tags/%E8%B6%8A%E7%8B%B1/"/>
+    
+    <category term="内容审核" scheme="https://zhanglichen0711.github.io/tags/%E5%86%85%E5%AE%B9%E5%AE%A1%E6%A0%B8/"/>
     
   </entry>
   
