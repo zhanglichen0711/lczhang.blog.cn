@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://zhanglichen0711.github.io/sitemap.xml
+Sitemap: https://lczhang.blog.cn/sitemap.xml
