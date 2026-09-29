@@ -5,12 +5,12 @@ title: 小黑程序员
 subtitle: AI大模型应用开发
 description: 记录大模型学习与行业热点思考。拆开模型，接进业务。
 keywords: LLM,RAG,Agent,NLP,深度学习,Python,AI应用开发
-author: Eason
+author: zhanglichen
 language: zh-CN
 timezone: Asia/Shanghai
 
-# 若使用项目仓库 pages，把 url 改成 https://zhanglichen0711.github.io/仓库名/
-url: https://zhanglichen0711.github.io
+# 站点已绑定自定义域名 lczhang.blog.cn（source/CNAME 同步维护）
+url: https://lczhang.blog.cn
 root: /
 # 用 abbrlink 生成短且稳定的链接：以后改文件名或在 notes/thoughts 之间移动文章，URL 都不会变。
 # 原来的 posts/:year/:month/:day/:title/ 会把目录名拼进标题，得到
@@ -88,13 +88,10 @@ pagination_dir: page
 
 theme: xiaohei
 
-# 部署到 GitHub Pages
-# 推荐仓库名: zhanglichen0711.github.io （用户站，url 保持上面即可）
-# 若用普通仓库，把 repo 改成 git@github.com:zhanglichen0711/仓库名.git
-# 并把 url/root 同步修改
+# 部署到 GitHub Pages（仓库已改名为 lczhang.blog.cn，自定义域名见 source/CNAME）
 deploy:
   type: git
-  repo: git@github.com:zhanglichen0711/zhanglichen0711.github.io.git
+  repo: git@github.com:zhanglichen0711/lczhang.blog.cn.git
   branch: main
 
 feed:

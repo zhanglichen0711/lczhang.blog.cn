@@ -1,0 +1,2 @@
+﻿public ERR: [safe-delete][SAFE_DELETE_FAIL_CLOSED] {"target":"E:\\blog_hexo\\xiaohei-blog\\public","reason":"trash-failed","detail":"使用“3”个参数调用“DeleteDirectory”时发生异常:“这个系统不支持该功能。”"}
+db.json ERR: [safe-delete][SAFE_DELETE_FAIL_CLOSED] {"target":"E:\\blog_hexo\\xiaohei-blog\\db.json","reason":"trash-failed","detail":"使用“3”个参数调用“DeleteFile”时发生异常:“这个系统不支持该功能。”"}

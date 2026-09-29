@@ -1,0 +1,48 @@
+# 大模型应用排期表（46 篇，2025-01-06 起 +7 天）
+idx|date|dir|slug|abbr|title
+1|2025-01-06|Prompt-Engineering|prompt-intro|3038192907|提示工程入门：模型如何理解你的指令
+2|2025-01-13|Prompt-Engineering|prompt-role-context|893496592|结构化提示：角色、上下文与任务
+3|2025-01-20|Prompt-Engineering|prompt-fewshot|2862964294|少样本提示：用例子教会模型
+4|2025-01-27|Prompt-Engineering|prompt-structured-output|1817551796|输出约束：让模型稳定输出 JSON
+5|2025-02-03|Prompt-Engineering|prompt-cot|3284716324|思维链：引导模型一步步推理
+6|2025-02-10|Prompt-Engineering|prompt-versioning|4093603351|把提示当代码管理：版本与评测
+7|2025-02-17|RAG|rag-intro|3017318200|RAG 简介：为什么要给模型外挂知识
+8|2025-02-24|RAG|rag-minimal|2139012861|RAG 最小闭环只有三步
+9|2025-03-03|RAG|rag-chunking|4133758410|文档切分：从固定长度到结构感知
+10|2025-03-10|RAG|rag-embedding|3442989334|Embedding 与向量检索：让检索理解语义
+11|2025-03-17|RAG|rag-query-understanding|3810401487|查询理解：意图分流与改写
+12|2025-03-24|RAG|rag-hybrid|3508449625|RAG 混合检索与 rerank
+13|2025-03-31|RAG|rag-filter-acl|2769194034|检索过滤：权限、时效与版本隔离
+14|2025-04-07|RAG|rag-context-assembly|3999184205|上下文组装：让模型只看该看的
+15|2025-04-14|RAG|rag-ingestion|2842351578|入库流水线：解析、清洗与质量门禁
+16|2025-04-21|RAG|rag-evaluation|2684484614|RAG 评测：命中率、引用与拒答
+17|2025-04-28|RAG|rag-service|3285694108|RAG 服务化：分层架构与工程落地
+18|2025-05-05|RAG|rag-engineering-loop|1988079953|RAG 工程闭环：从切分、混合检索到评测和隔离
+19|2025-05-12|Evaluation|eval-intro|1054876846|LLM 评测简介：没有评测就没有优化
+20|2025-05-19|Evaluation|eval-dataset|4018017140|评测集设计：golden set 与坏案例归档
+21|2025-05-26|Evaluation|eval-llm-judge|1291161124|LLM-as-Judge：让模型评价模型
+22|2025-06-02|Evaluation|eval-online|4099848594|线上评测：trace、评分与回归
+23|2025-06-09|Evaluation|eval-practice|3835041851|评测实战：给 RAG 与 Agent 建评测体系
+24|2025-06-16|Agent|agent-intro|3618220713|Agent 简介：从对话到自主行动
+25|2025-06-23|Agent|agent-function-call|2641794943|Function Calling：让模型稳定调用工具
+26|2025-06-30|Agent|agent-tool-design|2104314982|工具设计：名称、参数与错误契约
+27|2025-07-07|Agent|agent-mcp|2617256498|MCP：把工具封装成标准协议
+28|2025-07-14|Agent|agent-patterns|2769725658|Agent 的思考模式：从 Tool use 到 ReAct
+29|2025-07-21|Agent|agent-planning|4206916910|规划与反思：让 Agent 学会拆解任务
+30|2025-07-28|Agent|agent-memory|252005836|Agent 记忆：会话、知识与长期状态
+31|2025-08-04|Agent|agent-multi|2066720703|多 Agent 协作：分工与通信
+32|2025-08-11|Agent|agent-observability|1107512910|Agent 可观测：让每一步都有迹可循
+33|2025-08-18|Agent|agent-evaluation|786405299|Agent 评测：任务成功率与回归
+34|2025-08-25|Agent|agent-reliability|98107650|Agent 工程化：可靠性、成本与安全
+35|2025-09-01|Agent|agent-project|232737413|实战：把一组工具封装成 Agent 服务
+36|2025-09-08|LangGraph|langgraph-evolution|2267293682|从 LangChain 到 LangGraph：框架的演进
+37|2025-09-15|LangGraph|langgraph-core|3069872840|LangGraph 核心：节点、边与状态
+38|2025-09-22|LangGraph|langgraph-state|1028338986|状态管理与持久化：让 Agent 可恢复
+39|2025-09-29|LangGraph|langgraph-control|3224751976|条件分支与循环：把 ReAct 画成图
+40|2025-10-06|LangGraph|langgraph-human|3701507656|人工介入与中断恢复：human-in-the-loop
+41|2025-10-13|LangGraph|langgraph-project|4201415299|实战：用 LangGraph 重写 Agent 服务
+42|2025-10-20|Multimodal|multimodal-intro|2531155411|多模态模型：从文本到图文理解
+43|2025-10-27|Multimodal|multimodal-vlm|180137639|VLM 实战：图像理解与文档解析
+44|2025-11-03|Multimodal|multimodal-business|903188939|图文协同：质检与文档的业务落地
+45|2025-11-10|Multimodal|multimodal-evaluation|2758626556|多模态评测：更隐蔽的幻觉
+46|2025-11-17|Multimodal|multimodal-project|1997093708|实战：图文知识库与智能质检

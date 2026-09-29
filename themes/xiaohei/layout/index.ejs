@@ -1,18 +1,24 @@
 <section class="hero docs-hero">
-  <div class="hero-copy">
-    <p class="eyebrow">AI Application Development</p>
-    <h1><%= theme.slogan || 'Split the model. Ship the system.' %></h1>
-    <p class="hero-desc"><%= theme.slogan_zh || config.subtitle %></p>
-    <div class="hero-meta">
-      <span><%= site.posts.length %> notes</span>
-      <span><%= theme.english_name || config.author %></span>
+  <div class="hero-media">
+    <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="<%= url_for('/img/hero-poster.jpg') %>" aria-label="首页动态背景">
+      <source src="<%= url_for('/img/首页.mp4') %>" type="video/mp4">
+    </video>
+    <div class="hero-cover-overlay">
+      <div class="hero-copy">
+        <p class="eyebrow">AI Application Development</p>
+        <h1><%= theme.slogan || 'Split the model. Ship the system.' %></h1>
+        <p class="hero-desc"><%= theme.slogan_zh || config.subtitle %></p>
+        <div class="hero-meta">
+          <span><%= site.posts.length %> 篇笔记</span>
+          <span><%= theme.english_name || config.author %></span>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="hero-cover" style="background-image:url('<%= url_for(theme.cover) %>')"></div>
 </section>
 
 <section class="post-list">
-  <p class="list-kicker">Latest Articles</p>
+  <p class="list-kicker">最新文章</p>
   <% page.posts.each(function (post) { %>
     <article class="post-card">
       <div class="post-card-meta">
@@ -37,8 +43,8 @@
 
 <% if (page.total > 1) { %>
   <nav class="pager">
-    <% if (page.prev) { %><a href="<%= url_for(page.prev_link) %>">Newer</a><% } else { %><span></span><% } %>
+    <% if (page.prev) { %><a href="<%= url_for(page.prev_link) %>">较新</a><% } else { %><span></span><% } %>
     <span class="pager-info"><%= page.current %> / <%= page.total %></span>
-    <% if (page.next) { %><a href="<%= url_for(page.next_link) %>">Older</a><% } else { %><span></span><% } %>
+    <% if (page.next) { %><a href="<%= url_for(page.next_link) %>">较早</a><% } else { %><span></span><% } %>
   </nav>
 <% } %>

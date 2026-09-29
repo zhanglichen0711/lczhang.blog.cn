@@ -1,0 +1,47 @@
+已归档 23 篇 -> .workbuddy/backup/mltune-old-posts-2026-09-08
+计划总篇数: 44
+idx|date|dir|slug|abbr|title
+0|2023-07-12|Machine-Learning|KEEP|KEEP|KEEP-1
+1|2023-07-19|Machine-Learning|KEEP|KEEP|KEEP-2
+2|2023-07-27|Machine-Learning|KEEP|KEEP|KEEP-3
+3|2023-08-03|Machine-Learning|KEEP|KEEP|KEEP-4
+4|2023-08-11|Machine-Learning|ml-logistic-regression|2117755956|逻辑回归与分类问题
+5|2023-08-18|Machine-Learning|ml-feature-engineering|853145242|特征工程与数据预处理
+6|2023-08-26|Machine-Learning|ml-model-evaluation|2117410589|模型评估与交叉验证
+7|2023-09-02|Machine-Learning|ml-svm|1270350056|支持向量机与核方法
+8|2023-09-10|Deep-Learning|dl-intro|3963945906|深度学习简介：从机器学习到神经网络
+9|2023-09-17|Deep-Learning|dl-perceptron|4070361503|感知机与多层神经网络
+10|2023-09-25|Deep-Learning|dl-forward-tensor|649173777|前向传播与张量基础
+11|2023-10-02|Deep-Learning|dl-activation-loss|990601816|激活函数与损失函数
+12|2023-10-10|Deep-Learning|dl-backpropagation|3601216704|反向传播：梯度是怎么算出来的
+13|2023-10-17|Deep-Learning|dl-optimizers|2761198620|梯度下降与优化器
+14|2023-10-25|Deep-Learning|dl-regularization|712968067|过拟合与正则化
+15|2023-11-01|Deep-Learning|dl-cnn|2392515219|卷积神经网络 CNN
+16|2023-11-09|Deep-Learning|dl-training-tricks|914053672|训练技巧：BatchNorm、学习率与早停
+17|2023-11-16|Deep-Learning|dl-project|188757675|深度学习实战：图像分类小项目
+18|2023-11-24|PyTorch|pytorch-intro|1815827559|PyTorch 简介：动态图与自动求导
+19|2023-12-01|PyTorch|pytorch-tensors|1444034012|张量：创建、运算与索引
+20|2023-12-09|PyTorch|pytorch-autograd|2306533608|autograd 自动求导
+21|2023-12-16|PyTorch|pytorch-module|1506816750|用 nn.Module 搭建模型
+22|2023-12-24|PyTorch|pytorch-training-loop|1284556597|训练循环：DataLoader 与优化器
+23|2023-12-31|PyTorch|pytorch-project|325563308|PyTorch 实战：训练一个分类模型
+24|2024-01-08|Transformer|transformer-intro|3846239361|Transformer 为什么诞生：从序列模型到注意力
+25|2024-01-15|Transformer|transformer-attention|3053924627|注意力机制原理：Q、K、V 在算什么
+26|2024-01-23|Transformer|transformer-multihead|172148261|多头注意力与位置编码
+27|2024-01-30|Transformer|transformer-architecture|1402788920|编码器-解码器架构拆解
+28|2024-02-07|Transformer|transformer-evolution|1967017821|从 Transformer 到 BERT 与 GPT
+29|2024-02-14|Transformer|transformer-handson|3812796151|动手实现一个简化 Transformer
+30|2024-02-22|NLP|nlp-intro|4159942547|NLP 任务全景与文本表示
+31|2024-02-29|NLP|nlp-preprocess|307573553|文本预处理：分词、清洗与规范化
+32|2024-03-08|NLP|nlp-word-embedding|4016747543|词向量：从独热到 Word2Vec 与 FastText
+33|2024-03-15|NLP|nlp-text-classification|2461459681|文本分类：朴素贝叶斯到 FastText
+34|2024-03-23|NLP|nlp-rnn|3908590348|序列建模：RNN、LSTM 与 GRU
+35|2024-03-30|NLP|nlp-bert|1135734711|预训练模型：BERT 与下游微调
+36|2024-04-07|NLP|nlp-hierarchical-classification|1156227384|层级文本分类实战
+37|2024-04-14|NLP|nlp-generation|1368527766|从分类到生成：大模型时代的 NLP
+38|2024-04-22|Fine-tuning|fine-tuning-intro|782508281|什么是微调：从预训练到领域模型
+39|2024-04-29|Fine-tuning|fine-tuning-strategy|269334195|迁移学习与微调策略
+40|2024-05-07|Fine-tuning|fine-tuning-lora|596953945|LoRA / QLoRA 高效微调
+41|2024-05-14|Fine-tuning|fine-tuning-sft|3028613644|指令微调 SFT：数据构造与训练
+42|2024-05-22|Fine-tuning|fine-tuning-rlhf-dpo|1577703011|对齐：RLHF 与 DPO
+43|2024-05-29|Fine-tuning|fine-tuning-evaluation|3306306500|微调评测与上线

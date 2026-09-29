@@ -1,12 +1,12 @@
 <section class="archive">
   <header class="page-head">
-    <p class="eyebrow">Library</p>
+    <p class="eyebrow">分类</p>
     <h1>
       <% if (is_category()) { %><%= page.category %>
-      <% } else if (is_tag()) { %>Tag · <%= page.tag %>
-      <% } else { %>Archives<% } %>
+      <% } else if (is_tag()) { %>标签 · <%= page.tag %>
+      <% } else { %>归档<% } %>
     </h1>
-    <p><%= page.posts.length %> notes</p>
+    <p><%= page.posts.length %> 篇</p>
   </header>
   <%
     let lastYear = '';
@@ -28,8 +28,8 @@
 
 <% if (page.total > 1) { %>
   <nav class="pager">
-    <% if (page.prev) { %><a href="<%= url_for(page.prev_link) %>">Newer</a><% } else { %><span></span><% } %>
+    <% if (page.prev) { %><a href="<%= url_for(page.prev_link) %>">较新</a><% } else { %><span></span><% } %>
     <span class="pager-info"><%= page.current %> / <%= page.total %></span>
-    <% if (page.next) { %><a href="<%= url_for(page.next_link) %>">Older</a><% } else { %><span></span><% } %>
+    <% if (page.next) { %><a href="<%= url_for(page.next_link) %>">较早</a><% } else { %><span></span><% } %>
   </nav>
 <% } %>

@@ -1,5 +1,5 @@
 # 主题 xiaohei · 文档站布局
-english_name: Eason
+english_name: zhanglichen
 slogan: Split the model. Ship the system.
 slogan_zh: 拆开模型，接进业务。
 
@@ -8,38 +8,89 @@ favicon: /img/favicon.png
 cover: /img/cover.jpg
 wechat_qr: /img/wechat-qr.jpg
 
-# 前两项是板块页，由 scripts/sections.js 按 _posts 下的目录生成（不改动任何文章）
-tabs:
-  学习笔记: /notes/
-  行业思考: /thoughts/
-  归档: /archives/
-  关于: /about/
-
+# 侧边栏：三大板块，每个板块含若干「一级分类」，技术笔记的一级分类下再挂「二级分类」。
+# 一级标题用中文，二级标题用英文；path 指向对应分类页（英文二级已按 Hexo slug 化，空格/点转连字符）。
 sidebar:
   - id: notes
-    label: 学习笔记
+    label: 技术笔记
+    icon: book
     children:
-      - { name: Python, path: /categories/Python/, icon: code }
-      - { name: MySQL, path: /categories/MySQL/, icon: db }
-      - { name: Redis, path: /categories/Redis/, icon: cache }
-      - { name: Machine Learning, path: /categories/Machine-Learning/, icon: chart }
-      - { name: Deep Learning, path: /categories/Deep-Learning/, icon: net }
-      - { name: NLP, path: /categories/NLP/, icon: text }
-      - { name: RAG, path: /categories/RAG/, icon: search }
-      - { name: Milvus, path: /categories/Milvus/, icon: hex }
-      - { name: Agent, path: /categories/Agent/, icon: bot }
+      - name: 编程基础
+        path: /categories/编程基础/
+        icon: code
+        children:
+          - { name: Python, path: /categories/编程基础/Python/, icon: dot }
+          - { name: Linux, path: /categories/编程基础/Linux/, icon: dot }
+          - { name: Data Science, path: /categories/编程基础/Data-Science/, icon: dot }
+      - name: 前端交互
+        path: /categories/前端交互/
+        icon: layout
+        children:
+          - { name: Vue3, path: /categories/前端交互/Vue3/, icon: dot }
+          - { name: React, path: /categories/前端交互/React/, icon: dot }
+          - { name: TypeScript, path: /categories/前端交互/TypeScript/, icon: dot }
+      - name: 后端服务
+        path: /categories/后端服务/
+        icon: server
+        children:
+          - { name: FastAPI, path: /categories/后端服务/FastAPI/, icon: dot }
+          - { name: Node.js, path: /categories/后端服务/Node-js/, icon: dot }
+      - name: 数据与存储
+        path: /categories/数据与存储/
+        icon: db
+        children:
+          - { name: MySQL, path: /categories/数据与存储/MySQL/, icon: dot }
+          - { name: Redis, path: /categories/数据与存储/Redis/, icon: dot }
+          - { name: Milvus, path: /categories/数据与存储/Milvus/, icon: dot }
+      - name: 模型训练与微调
+        path: /categories/模型训练与微调/
+        icon: net
+        children:
+          - { name: Machine Learning, path: /categories/模型训练与微调/Machine-Learning/, icon: dot }
+          - { name: Deep Learning, path: /categories/模型训练与微调/Deep-Learning/, icon: dot }
+          - { name: NLP, path: /categories/模型训练与微调/NLP/, icon: dot }
+          - { name: PyTorch, path: /categories/模型训练与微调/PyTorch/, icon: dot }
+          - { name: Transformer, path: /categories/模型训练与微调/Transformer/, icon: dot }
+          - { name: Fine-tuning, path: /categories/模型训练与微调/Fine-tuning/, icon: dot }
+      - name: 模型部署与推理
+        path: /categories/模型部署与推理/
+        icon: rocket
+        children:
+          - { name: vLLM, path: /categories/模型部署与推理/vLLM/, icon: dot }
+          - { name: Quantization, path: /categories/模型部署与推理/Quantization/, icon: dot }
+          - { name: Inference Optimization, path: /categories/模型部署与推理/Inference-Optimization/, icon: dot }
+      - name: 大模型应用
+        path: /categories/大模型应用/
+        icon: bot
+        children:
+          - { name: RAG, path: /categories/大模型应用/RAG/, icon: dot }
+          - { name: Agent, path: /categories/大模型应用/Agent/, icon: dot }
+          - { name: LangGraph, path: /categories/大模型应用/LangGraph/, icon: dot }
+          - { name: Prompt Engineering, path: /categories/大模型应用/Prompt-Engineering/, icon: dot }
+          - { name: Multimodal, path: /categories/大模型应用/Multimodal/, icon: dot }
+          - { name: Evaluation, path: /categories/大模型应用/Evaluation/, icon: dot }
+      - name: 工程化与运维
+        path: /categories/工程化与运维/
+        icon: box
+        children:
+          - { name: Docker, path: /categories/工程化与运维/Docker/, icon: dot }
+          - { name: Kubernetes, path: /categories/工程化与运维/Kubernetes/, icon: dot }
+          - { name: GitHub Actions, path: /categories/工程化与运维/GitHub-Actions/, icon: dot }
+          - { name: Observability, path: /categories/工程化与运维/Observability/, icon: dot }
+          - { name: Safety, path: /categories/工程化与运维/Safety/, icon: dot }
   - id: thoughts
     label: 行业思考
+    icon: news
     children:
-      - { name: Dynamics, path: /categories/Dynamics/, icon: news }
-      - { name: Job Trends, path: /categories/Job-Trends/, icon: job }
-      - { name: How to Learn, path: /categories/How-to-Learn/, icon: book }
-  - id: library
-    label: 站点
+      - { name: 行业发展, path: /categories/行业发展/, icon: news }
+      - { name: 就业趋势, path: /categories/就业趋势/, icon: job }
+      - { name: 如何学习, path: /categories/如何学习/, icon: book }
+  - id: site
+    label: 站点建设
+    icon: home
     children:
-      - { name: Archives, path: /archives/, icon: archive }
-      - { name: About, path: /about/, icon: user }
-      - { name: Friends, path: /links/, icon: link }
+      - { name: 关于站长, path: /about/, icon: user }
+      - { name: 相关链接, path: /links/, icon: link }
 
 social:
   github: https://github.com/zhanglichen0711
@@ -48,9 +99,9 @@ social:
 giscus:
   enable: true
   # repo_id / category_id 必须填，否则评论区不渲染（避免留下空标题）
-  # 获取方式：打开 https://giscus.app → 填入仓库 zhanglichen0711/zhanglichen0711.github.io
+  # 获取方式：打开 https://giscus.app → 填入仓库 zhanglichen0711/lczhang.blog.cn
   #          → 页面底部「启用 giscus」区块里会生成这两串 ID，复制回来即可
-  repo: zhanglichen0711/zhanglichen0711.github.io
+  repo: zhanglichen0711/lczhang.blog.cn
   repo_id: ""
   category: Announcements
   category_id: ""
@@ -69,4 +120,4 @@ reading_progress: true
 toc: true
 related_posts: true
 related_count: 3
-footer: © 2026 Eason · 小黑程序员
+footer: © 2026 zhanglichen · 小黑程序员

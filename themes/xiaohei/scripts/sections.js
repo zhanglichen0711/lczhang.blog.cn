@@ -6,7 +6,7 @@
 // tags 是 Warehouse 的虚拟属性，此时访问会抛 "property 'tags' closes the circle"。
 hexo.extend.generator.register('xiaohei-sections', function (locals) {
   const sections = [
-    { dir: 'notes', path: 'notes/', title: '学习笔记', eyebrow: 'Notes' },
+    { dir: 'notes', path: 'notes/', title: '技术笔记', eyebrow: 'Notes' },
     { dir: 'thoughts', path: 'thoughts/', title: '行业思考', eyebrow: 'Thoughts' }
   ];
 

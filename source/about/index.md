@@ -1,43 +1,53 @@
 ---
-title: About
+title: 关于站长
 date: 2026-08-26
-description: Eason · 小黑程序员
+description: 张力琛 · 小黑程序员
 ---
 
 <div class="about-card">
-<img src="/img/avatar.jpg" alt="Eason">
+<img src="/img/avatar.jpg" alt="张力琛">
 <div>
 
-**Eason**  
-小黑程序员 · AI Application Development
+**张力琛**  
+AI 大模型应用工程师 · 小黑程序员
 
-Signature: **Split the model. Ship the system.**  
+签名：**Split the model. Ship the system.**  
 拆开模型，接进业务。
 
-This site keeps two kinds of writing: reproducible learning notes, and opinions that can be argued with.
+本站记录两类内容：可复现的技术笔记，以及可以争论的行业观点。
 
 </div>
 </div>
 
-## What lives here
+## 个人基本情况
 
-- **Learning Notes**: Python, MySQL, Redis, Machine Learning, Deep Learning, NLP, RAG, Milvus, Agent.
-- **Industry Thoughts**: Dynamics, job trends, and how to learn AI application development.
+- 姓名：张力琛
+- 性别：男
+- 学历：硕士
+- 邮箱：[zhanglichen0711@163.com](mailto:zhanglichen0711@163.com)
 
-## Skill map
+## 工作经历
 
-| Track | Focus |
+- 3 年 AI 大模型应用开发经验，聚焦大模型落地、检索增强生成（RAG）与智能体（Agent）工程化。
+
+## 技术栈
+
+| 方向 | 重点 |
 | --- | --- |
-| Programming & data | Python, Pandas / NumPy, MySQL, Redis |
-| Models | Scikit-learn, CNN / RNN / LSTM, FastText, BERT, YOLO |
-| LLM apps | Prompt / CoT, RAG workflows, chunk metadata, Milvus |
-| Agent | Function Call, MCP, ReAct and tool orchestration |
-| Engineering | FastAPI, eval sets, traces, Docker |
+| 编程与数据 | Python、Pandas / NumPy、MySQL、Redis |
+| 后端服务 | FastAPI、Node.js |
+| 模型训练与微调 | Scikit-learn、CNN / RNN / LSTM、FastText、BERT、PyTorch |
+| 大模型集成与编排 | Prompt / CoT、RAG 工作流、LangChain、LangGraph、Agent |
+| 检索与存储 | Milvus（向量 + 稀疏混合检索）、Redis、MySQL |
+| 容器化部署 | Docker、Kubernetes、GitHub Actions |
 
-## Contact
+## 项目经历
 
-- GitHub: [zhanglichen0711](https://github.com/zhanglichen0711)
-- WeChat: header icon
-- Feed: [RSS / Atom](/atom.xml)
+待补充。
 
-No phone number or resume timeline on this page.
+## 联系方式
+
+- GitHub：[zhanglichen0711](https://github.com/zhanglichen0711)
+- 邮箱：zhanglichen0711@163.com
+- 微信：见顶部图标
+- 订阅：[RSS / Atom](/atom.xml)

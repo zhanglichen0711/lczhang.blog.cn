@@ -1,0 +1,37 @@
+# 工程化与运维排期表（35 篇）
+idx|date|dir|slug|abbr|title
+1|2025-01-02|Docker|docker-intro|1456813866|Docker 简介：为什么要把服务装进容器
+2|2025-01-15|Docker|docker-basics|3046212988|Docker 核心概念与常用命令
+3|2025-01-25|Docker|docker-image-build|348910091|Dockerfile 与镜像构建
+4|2025-02-08|Docker|docker-volume-network|2731963888|Docker 数据卷与网络
+5|2025-02-20|Docker|docker-compose|2638849701|Docker Compose 编排多服务
+6|2025-03-07|Docker|docker-security|3654364910|Docker 资源限制与安全加固
+7|2025-03-18|Docker|docker-llm-gpu|3169119536|容器化 LLM 服务：GPU 与推理镜像
+8|2025-03-31|Docker|docker-production|1911118507|Docker 生产实践：镜像瘦身与健康检查
+9|2025-04-10|Kubernetes|k8s-intro|1036317666|Kubernetes 简介：容器编排解决什么问题
+10|2025-04-24|Kubernetes|k8s-pod-deployment|183693549|Kubernetes 核心对象：Pod 与 Deployment
+11|2025-05-06|Kubernetes|k8s-service-ingress|3548338343|Kubernetes 服务发现：Service 与 Ingress
+12|2025-05-21|Kubernetes|k8s-config|3037849350|Kubernetes 配置管理：ConfigMap 与 Secret
+13|2025-06-01|Kubernetes|k8s-probes|390075759|Kubernetes 探针与优雅退出
+14|2025-06-14|Kubernetes|k8s-rollout|3999899664|Kubernetes 滚动更新与回滚
+15|2025-06-24|Kubernetes|k8s-storage|3978156318|Kubernetes 存储：PV、PVC 与 StatefulSet
+16|2025-07-08|Kubernetes|k8s-rag-project|84326068|实战：把 RAG 服务部署到 Kubernetes
+17|2025-07-20|GitHub-Actions|actions-intro|2405557960|GitHub Actions 简介：把 CI/CD 写进仓库
+18|2025-08-04|GitHub-Actions|actions-workflow|1248742443|GitHub Actions 工作流基础：触发与任务编排
+19|2025-08-15|GitHub-Actions|actions-cache|1022135682|GitHub Actions 依赖缓存与常用 Action
+20|2025-08-28|GitHub-Actions|actions-secrets|2885240156|GitHub Actions Secrets 与多环境部署
+21|2025-09-07|GitHub-Actions|actions-docker|2998301478|GitHub Actions 构建并推送 Docker 镜像
+22|2025-09-21|GitHub-Actions|actions-hexo-cicd|1790984732|实战：Hexo 博客自动发布流水线
+23|2025-10-03|Observability|obs-intro|2893501257|可观测性简介：日志、指标与追踪
+24|2025-10-18|Observability|obs-logging|63399947|结构化日志与请求追踪
+25|2025-10-29|Observability|obs-metrics|3296491234|指标监控：Prometheus 与 Grafana
+26|2025-11-11|Observability|obs-langfuse|1581580108|LLM 调用追踪：接入 Langfuse
+27|2025-11-21|Observability|obs-agent-tracing|2438049996|Agent 可观测：工具调用与中间过程
+28|2025-12-05|Observability|obs-cost|345540440|Token 成本监控与配额治理
+29|2025-12-17|Observability|obs-rag-project|228283361|实战：给 RAG 服务搭建观测体系
+30|2026-01-01|Safety|safety-intro|2606210744|LLM 安全简介：威胁面全景
+31|2026-01-12|Safety|safety-prompt-injection|3226898925|Prompt 注入攻击与防御
+32|2026-01-25|Safety|safety-jailbreak|2539789672|越狱攻击与内容安全审核
+33|2026-02-04|Safety|safety-privacy|3544841612|数据隐私与脱敏合规
+34|2026-02-18|Safety|safety-guardrails|465487424|输出校验与护栏设计
+35|2026-03-02|Safety|safety-project|1686365115|实战：搭一层生产级 LLM 安全防线

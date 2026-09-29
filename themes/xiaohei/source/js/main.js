@@ -20,35 +20,35 @@
     }, 'https://giscus.app');
   }
 
-  /* ===== 侧边栏分组：记住用户手动展开/收起的状态 ===== */
-  const SB_KEY = 'xiaohei-sidebar';
-  function loadSidebarState() {
-    try { return JSON.parse(localStorage.getItem(SB_KEY)) || {}; } catch (e) { return {}; }
+  /* ===== 侧边栏：一级分类整行点击展开/收起二级（记住状态） ===== */
+  const L1_KEY = 'xiaohei-sidebar-l1';
+  function loadState(key) {
+    try { return JSON.parse(localStorage.getItem(key)) || {}; } catch (e) { return {}; }
   }
-  function saveSidebarState(id, isOpen) {
+  function saveState(key, id, isOpen) {
     try {
-      const s = loadSidebarState();
+      const s = loadState(key);
       s[id] = isOpen;
-      localStorage.setItem(SB_KEY, JSON.stringify(s));
+      localStorage.setItem(key, JSON.stringify(s));
     } catch (e) {}
   }
-  const sbState = loadSidebarState();
+  const l1State = loadState(L1_KEY);
 
-  document.querySelectorAll('.side-group').forEach(function (btn) {
-    const id = btn.getAttribute('data-group');
-    // 用户手动操作过的分组，以记录为准（模板里的默认状态只作为首次访问的初始值）
-    if (id && Object.prototype.hasOwnProperty.call(sbState, id)) {
-      const remembered = !!sbState[id];
+  // 一级分类整行点击展开二级
+  document.querySelectorAll('.side-l1-row[data-l1]').forEach(function (btn) {
+    const key = btn.getAttribute('data-l1');
+    if (key && Object.prototype.hasOwnProperty.call(l1State, key)) {
+      const remembered = !!l1State[key];
       btn.setAttribute('aria-expanded', remembered ? 'true' : 'false');
       const panel = btn.nextElementSibling;
-      if (panel) panel.classList.toggle('open', remembered);
+      if (panel && panel.classList.contains('side-l2')) panel.classList.toggle('open', remembered);
     }
     btn.addEventListener('click', function () {
       var open = btn.getAttribute('aria-expanded') === 'true';
       btn.setAttribute('aria-expanded', open ? 'false' : 'true');
       var panel = btn.nextElementSibling;
-      if (panel) panel.classList.toggle('open', !open);
-      if (id) saveSidebarState(id, !open);
+      if (panel && panel.classList.contains('side-l2')) panel.classList.toggle('open', !open);
+      if (key) saveState(L1_KEY, key, !open);
     });
   });
 
@@ -344,13 +344,13 @@
     const btn = document.createElement('button');
     btn.className = 'copy-btn';
     btn.type = 'button';
-    btn.textContent = 'Copy';
+    btn.textContent = '复制';
     btn.setAttribute('aria-label', '复制代码');
     btn.addEventListener('click', function () {
       const text = code.textContent;
       const done = function () {
-        btn.textContent = 'Copied'; btn.classList.add('copied');
-        setTimeout(function () { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 1500);
+        btn.textContent = '已复制'; btn.classList.add('copied');
+        setTimeout(function () { btn.textContent = '复制'; btn.classList.remove('copied'); }, 1500);
       };
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(text).then(done).catch(fallback);

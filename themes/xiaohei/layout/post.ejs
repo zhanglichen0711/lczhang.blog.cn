@@ -8,8 +8,6 @@
     .length;
   const readMinutes = Math.max(1, Math.round(plainLen / 400));
   const dateStr = date(page.date, 'YYYY-MM-DD');
-  const updatedStr = date(page.updated || page.date, 'YYYY-MM-DD');
-  const showUpdated = updatedStr !== dateStr;
   let related = [];
   if (theme.related_posts && tags.length) {
     const tagNames = tags.map(t => t.name);
@@ -28,9 +26,6 @@
       <% }) %>
       <time datetime="<%= date_xml(page.date) %>"><%= dateStr %></time>
       <span><%= plainLen %> 字 · 约 <%= readMinutes %> 分钟</span>
-      <% if (showUpdated) { %>
-        <span>更新于 <%= updatedStr %></span>
-      <% } %>
     </div>
     <h1><%= page.title %></h1>
     <% if (page.description) { %><p class="lede"><%= page.description %></p><% } %>
@@ -57,7 +52,7 @@
     </div>
     <% if (theme.toc !== false) { %>
       <aside class="toc" id="tocBox">
-        <p class="toc-title">On this page</p>
+        <p class="toc-title">本页目录</p>
         <nav id="tocNav"></nav>
       </aside>
     <% } %>
@@ -65,17 +60,17 @@
 
   <nav class="post-nav">
     <% if (page.prev) { %>
-      <a href="<%= url_for(page.prev.path) %>"><span>Previous</span><strong><%= page.prev.title %></strong></a>
+      <a href="<%= url_for(page.prev.path) %>"><span>上一篇</span><strong><%= page.prev.title %></strong></a>
     <% } else { %><span></span><% } %>
     <% if (page.next) { %>
-      <a href="<%= url_for(page.next.path) %>"><span>Next</span><strong><%= page.next.title %></strong></a>
+      <a href="<%= url_for(page.next.path) %>"><span>下一篇</span><strong><%= page.next.title %></strong></a>
     <% } %>
   </nav>
 </article>
 
 <% if (related.length) { %>
   <section class="related">
-    <h2>Related notes</h2>
+    <h2>相关笔记</h2>
     <div class="related-grid">
       <% related.forEach(function (p) { %>
         <a href="<%= url_for(p.path) %>">
@@ -90,7 +85,7 @@
 <% /* repo_id / category_id 缺失时 giscus 会加载失败，只留下一个空标题，故直接不渲染 */ %>
 <% if (theme.giscus && theme.giscus.enable && theme.giscus.repo_id && theme.giscus.category_id) { %>
   <section class="comments" id="comments">
-    <h2>Comments</h2>
+    <h2>评论</h2>
     <script src="https://giscus.app/client.js"
       data-repo="<%= theme.giscus.repo %>"
       data-repo-id="<%= theme.giscus.repo_id %>"
