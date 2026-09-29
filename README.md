@@ -3,8 +3,8 @@
 Eason 的个人博客骨架：Hexo 7 + 自研主题 `xiaohei`。  
 定位：**小黑程序员 · AI 大模型应用开发**。英文名：**Eason**。签名：**Split the model. Ship the system.**
 
-推荐 GitHub 仓库名：`lczhang.blog.cn`  
-站点地址：`https://lczhang.blog.cn`
+推荐 GitHub 仓库名：`zhanglichen0711.github.io`  
+站点地址：`https://zhanglichen0711.github.io`
 
 ## 本地预览
 
@@ -46,22 +46,22 @@ npm run dev
 
 ## 部署到 GitHub Pages
 
-1. 在 GitHub 建仓库 `lczhang.blog.cn`（Public）
+1. 在 GitHub 建仓库 `zhanglichen0711.github.io`（Public）
 2. 本机配置 SSH key
 3. 确认根目录 `_config.yml` 里：
 
 ```yaml
-url: https://lczhang.blog.cn
+url: https://zhanglichen0711.github.io
 root: /
 deploy:
   type: git
-  repo: git@github.com:zhanglichen0711/lczhang.blog.cn.git
+  repo: git@github.com:zhanglichen0711/zhanglichen0711.github.io.git
   branch: main
 ```
 
 4. 执行 `npm run deploy`
 
-若仓库不是用户站而是普通项目仓库，把 `url` 改成 `https://lczhang.blog.cn/仓库名`，`root` 改成 `/仓库名/`。
+若仓库不是用户站而是普通项目仓库，把 `url` 改成 `https://zhanglichen0711.github.io/仓库名`，`root` 改成 `/仓库名/`。
 
 也可以不用 `hexo-deployer-git`，改成 GitHub Actions：把 `hexo generate` 的 `public/` 推到 `gh-pages` 或仓库根目录。
 
